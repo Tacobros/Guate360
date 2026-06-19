@@ -394,15 +394,5 @@ const G360_DATA = {
         }
       ]
     }
-  ],
-
-  chatbot_responses: {
-    "historia": "La Catedral Metropolitana de Guatemala inició su construcción en 1782 y fue concluida en 1867. Es el principal templo católico de la capital y un ejemplo importante de la arquitectura neoclásica con influencias barrocas coloniales. *[Información del recorrido actual]*",
-    "departamento": "La Catedral Metropolitana se encuentra en el Centro Histórico de la Ciudad de Guatemala, departamento de Guatemala, frente a la Plaza de la Constitución. *[Información del recorrido actual]*",
-    "horarios": "La Catedral Metropolitana generalmente está abierta al público de lunes a domingo, de 6:00 AM a 7:00 PM. Para misas y eventos especiales, los horarios pueden variar. *[Verificar con la institución]*",
-    "curiosidades": "¡Hay varias curiosidades fascinantes! Por ejemplo: los osarios bajo el altar mayor guardan restos de figuras históricas coloniales, y las campanas fueron fundidas con mezcla de plata para mejorar su resonancia. *[Ver sección 'Curiosidades' en la ficha]*",
-    "lugares": "Relacionados con esta catedral, te recomiendo explorar el Palacio Nacional de la Cultura (a 50 metros de distancia) y, si visitas Antigua Guatemala, la Catedral de Santiago. *[Próximamente disponibles en Guatemala 360]*",
-    "greetings": "¡Hola! Soy Guía360, tu asistente virtual del patrimonio guatemalteco 🇬🇹. Puedo responder preguntas sobre los lugares de la plataforma. ¿Qué quieres saber?",
-    "default": "No tengo información verificada sobre eso en mi base de conocimiento actual. Te recomiendo consultar el INGUAT (inguat.gob.gt) o el IDAEH para información oficial sobre el patrimonio de Guatemala. 📚"
-  }
+  ]
 };

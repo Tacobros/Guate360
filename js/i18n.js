@@ -557,6 +557,53 @@ const I18N = {
     chat_chip_hours: "Horaires",
     chat_chip_similar: "Lieux similaires",
     chat_chip_curiosities: "Curiosités",
+  },
+
+  zh: {
+    // NAV
+    nav_home: "首页",
+    nav_explore: "探索",
+    nav_tour: "演示游览",
+    nav_faq: "常见问题",
+    nav_contact: "联系我们",
+    nav_cta: "开始游览",
+    nav_tour_360: "查看360°",
+
+    // HERO
+    hero_badge: "危地马拉数字文化平台",
+    hero_title_1: "探索危地马拉",
+    hero_title_2: "从世界任何地方",
+    hero_title_3: "进行虚拟游览",
+    hero_desc: "通过360°互动虚拟游览，探索危地马拉的历史、文化和遗产。无需出行，随时畅游。",
+    hero_cta_primary: "开始虚拟游览",
+    hero_cta_secondary: "探索所有地点",
+
+    // STATS
+    stat_locations: "已记录地点",
+    stat_scenes: "360°场景",
+    stat_departments: "危地马拉省份",
+    stat_free: "完全免费",
+
+    // SECTIONS
+    section_why: "为什么选择危地马拉360？",
+    section_how: "如何运作",
+    section_locations: "目的地",
+    section_categories: "类别",
+    section_departments: "危地马拉",
+    section_featured: "精选地点",
+
+    // TOUR
+    tour_loading: "正在加载360°游览...",
+    tour_scenes_label: "游览场景",
+
+    // FAQ
+    faq_title: "常见问题",
+
+    // CONTACT
+    contact_title: "联系我们",
+    contact_submit: "发送消息",
+    contact_success_title: "消息已发送！",
+    contact_success_msg: "感谢您联系我们，我们将在2个工作日内回复您。",
   }
 };
 
@@ -567,7 +614,7 @@ const I18N = {
 const I18nEngine = {
 
   currentLang: 'es',
-  supportedLangs: ['es', 'en', 'fr'],
+  supportedLangs: ['es', 'en', 'fr', 'zh'],
 
   init() {
     const saved = localStorage.getItem('g360_lang');
@@ -616,7 +663,7 @@ const I18nEngine = {
 
   renderSwitcher() {
     const containers = document.querySelectorAll('.lang-switcher');
-    const flags = { es: '🇬🇹 ES', en: '🇺🇸 EN', fr: '🇫🇷 FR' };
+    const flags = { es: '🇬🇹 ES', en: '🇺🇸 EN', fr: '🇫🇷 FR', zh: '🇨🇳 中文' };
     containers.forEach(container => {
       container.innerHTML = this.supportedLangs.map(lang =>
         `<button class="lang-btn ${lang === this.currentLang ? 'active' : ''}"

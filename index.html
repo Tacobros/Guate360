@@ -405,61 +405,6 @@
   </div>
 </div>
 
-<!-- CHATBOT SECTION -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="chatbot-section">
-      <div>
-        <p class="section-label">Asistente IA</p>
-        <h2 class="section-title">Conoce a Guía360</h2>
-        <p class="section-subtitle">Tu guía virtual educativa del patrimonio guatemalteco. Pregúntale lo que quieras sobre los lugares de la plataforma.</p>
-        <ul style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
-            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
-            <span>Responde solo con información verificada de la base de conocimiento</span>
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
-            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
-            <span>Sugiere lugares relacionados y rutas para visitar</span>
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
-            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
-            <span>Explica contexto histórico, arquitectónico y cultural</span>
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
-            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
-            <span>Indica claramente cuando no tiene información disponible</span>
-          </li>
-        </ul>
-        <button class="btn btn--primary" onclick="document.querySelector('.chatbot-toggle').click()">
-          <i class="fa fa-comments"></i> Hablar con Guía360
-        </button>
-      </div>
-      <!-- Preview del chat -->
-      <div class="chatbot-preview">
-        <div class="chat-header">
-          <div class="chat-avatar">🤖</div>
-          <div>
-            <div class="chat-name">Guía360</div>
-            <div class="chat-status">En línea ahora</div>
-          </div>
-        </div>
-        <div class="chat-messages">
-          <div class="chat-msg chat-msg--bot">¡Hola! Soy Guía360, tu asistente virtual del patrimonio guatemalteco 🇬🇹 ¿Qué quieres saber sobre nuestros lugares?</div>
-          <div class="chat-msg chat-msg--user">¿Cuándo fue construida la Catedral?</div>
-          <div class="chat-msg chat-msg--bot">La Catedral Metropolitana inició su construcción en <strong>1782</strong> y fue concluida en <strong>1867</strong>. Fue diseñada en estilo neoclásico con influencias barrocas coloniales. 📜 <em>[Fuente: IDAEH]</em></div>
-          <div class="chat-msg chat-msg--user">¿Qué otros lugares hay cerca?</div>
-          <div class="chat-msg chat-msg--bot">¡A solo pasos de la Catedral está el Palacio Nacional de la Cultura! Ambos están frente a la Plaza de la Constitución. Te recomiendo visitarlos juntos. 🏛️</div>
-        </div>
-        <div class="chat-input-area">
-          <input class="chat-input" type="text" placeholder="Escribe tu pregunta..." readonly>
-          <button class="chat-send">➤</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CTA FINAL -->
 <section class="section section--green">
   <div class="container text-center">
@@ -660,32 +605,24 @@
   </div>
 </footer>
 
-<!-- CHATBOT WIDGET FLOTANTE -->
-<div class="chatbot-widget">
-  <div class="chatbot-panel" id="chatbot-panel">
-    <button class="chatbot-panel-close" id="chatbot-close">✕</button>
-    <div class="chat-header">
-      <div class="chat-avatar">🤖</div>
-      <div>
-        <div class="chat-name">Guía360</div>
-        <div class="chat-status">Asistente virtual</div>
-      </div>
+<!-- SIDE BANNERS — PATROCINADORES (fijos, no interrumpen el flujo) -->
+<div id="side-banners">
+  <!-- Banner izquierdo -->
+  <div class="side-banner side-banner--left" id="side-banner-left">
+    <button class="side-banner-close" onclick="document.getElementById('side-banner-left').style.display='none'" aria-label="Cerrar">✕</button>
+    <div class="side-banner-tab" onclick="this.parentElement.classList.toggle('side-banner--collapsed')">
+      <span>PATROCINADOR</span>
     </div>
-    <div class="chat-messages" id="chat-messages-widget">
-    </div>
-    <div style="padding:0 16px 12px;display:flex;gap:8px;flex-wrap:wrap">
-      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Historia</button>
-      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Horarios</button>
-      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Lugares similares</button>
-    </div>
-    <div class="chat-input-area">
-      <input class="chat-input" type="text" placeholder="Pregunta sobre Guatemala...">
-      <button class="chat-send">➤</button>
-    </div>
+    <div class="side-banner-cards" id="side-left-cards"></div>
   </div>
-  <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Abrir chat con Guía360">
-    💬
-  </button>
+  <!-- Banner derecho -->
+  <div class="side-banner side-banner--right" id="side-banner-right">
+    <button class="side-banner-close" onclick="document.getElementById('side-banner-right').style.display='none'" aria-label="Cerrar">✕</button>
+    <div class="side-banner-tab" onclick="this.parentElement.classList.toggle('side-banner--collapsed')">
+      <span>OFERTA</span>
+    </div>
+    <div class="side-banner-cards" id="side-right-cards"></div>
+  </div>
 </div>
 
 <!-- MODAL -->
@@ -891,6 +828,72 @@
         `;
       });
     }
+
+    /* Side banners — patrocinadores flotantes */
+    const SIDE_ADS = {
+      left: [
+        {
+          cls: 'side-ad-card--bi',
+          logo: 'https://logo.clearbit.com/bancoindustrial.com.gt',
+          logoFallback: 'BI', logoBg: '#002B7F',
+          badge: 'PATROCINADOR ORO',
+          promo: 'Cuenta de ahorro sin comisiones',
+          desc: 'Abre tu cuenta en minutos desde la app.',
+          cta: 'Saber más', ctaBg: '#002B7F',
+          url: '#patrocinadores'
+        },
+        {
+          cls: 'side-ad-card--banr',
+          logo: 'https://logo.clearbit.com/banrural.com.gt',
+          logoFallback: 'BR', logoBg: '#006837',
+          badge: 'OFERTA',
+          promo: 'Préstamo personal desde 6% anual',
+          desc: 'Financiamiento para guatemaltecos en todo el país.',
+          cta: 'Cotizar', ctaBg: '#006837',
+          url: '#patrocinadores'
+        }
+      ],
+      right: [
+        {
+          cls: 'side-ad-card--camp',
+          logo: 'https://logo.clearbit.com/campero.com',
+          logoFallback: 'PC', logoBg: '#E31837',
+          badge: '2×1 HOY',
+          promo: '2×1 en combos familiares',
+          desc: 'Válido todos los domingos en cualquier sucursal.',
+          cta: 'Ver oferta', ctaBg: '#E31837',
+          url: '#patrocinadores'
+        },
+        {
+          cls: 'side-ad-card--tigo',
+          logo: 'https://logo.clearbit.com/tigo.com.gt',
+          logoFallback: 'TIGO', logoBg: '#00377B',
+          badge: 'NUEVO',
+          promo: 'Internet 5G ilimitado Q199/mes',
+          desc: 'La red más rápida de Guatemala llega a tu ciudad.',
+          cta: 'Contratar', ctaBg: '#00377B',
+          url: '#patrocinadores'
+        }
+      ]
+    };
+
+    function renderSideAd(ad) {
+      return `
+        <a href="${ad.url}" class="side-ad-card ${ad.cls}">
+          ${ad.badge ? `<span class="side-ad-badge">${ad.badge}</span>` : ''}
+          <img src="${ad.logo}" class="side-ad-logo" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="side-ad-logo-placeholder" style="background:${ad.logoBg};display:none">${ad.logoFallback}</div>
+          <div class="side-ad-promo">${ad.promo}</div>
+          <div class="side-ad-desc">${ad.desc}</div>
+          <span class="side-ad-cta" style="background:${ad.ctaBg}">${ad.cta}</span>
+        </a>`;
+    }
+
+    const leftCards  = document.getElementById('side-left-cards');
+    const rightCards = document.getElementById('side-right-cards');
+    if (leftCards)  leftCards.innerHTML  = SIDE_ADS.left.map(renderSideAd).join('');
+    if (rightCards) rightCards.innerHTML = SIDE_ADS.right.map(renderSideAd).join('');
   });
 </script>
 </body>

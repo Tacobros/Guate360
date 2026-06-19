@@ -83,8 +83,10 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-/* ---- Chatbot Widget ---- */
+/* ---- Chatbot Widget (REMOVED) ---- */
 function initChatbot() {
+  // chatbot removed
+  return;
   const toggle = document.querySelector('.chatbot-toggle');
   const panel = document.querySelector('.chatbot-panel');
   const closeBtn = document.querySelector('.chatbot-panel-close');
@@ -279,7 +281,6 @@ function initScrollReveal() {
 /* ---- Init on DOM ready ---- */
 document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
-  initChatbot();
   initFilters();
   setTimeout(initScrollReveal, 100);
 });

@@ -1686,3 +1686,156 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; }
   .sponsors-grid--silver { grid-template-columns: repeat(2, 1fr); }
   .sponsors-grid--bronze { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================================
+   SIDE BANNERS — PATROCINADORES FLOTANTES
+   Solo visible en pantallas >= 1400px (no interrumpe el contenido)
+   ============================================================ */
+
+.side-banner {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.side-banner--left  { left: 0; }
+.side-banner--right { right: 0; }
+
+/* Tab de colapso */
+.side-banner-tab {
+  background: var(--color-primary);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 4px 0;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  border-top: 2px solid var(--color-secondary);
+}
+.side-banner--left  .side-banner-tab { order: -1; border-radius: var(--radius-sm) var(--radius-sm) 0 0; border-top: none; border-bottom: 2px solid var(--color-secondary); }
+.side-banner--right .side-banner-tab { order: -1; border-radius: var(--radius-sm) var(--radius-sm) 0 0; border-top: none; border-bottom: 2px solid var(--color-secondary); }
+
+.side-banner-close {
+  position: absolute;
+  top: 28px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.25);
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.side-banner:hover .side-banner-close { opacity: 1; }
+
+/* Collapsed state */
+.side-banner--collapsed .side-banner-cards { display: none; }
+
+/* Cards stack */
+.side-banner-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Cada card de patrocinador */
+.side-ad-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.side-ad-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.side-ad-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.side-ad-card--bi::before   { background: #002B7F; }
+.side-ad-card--tigo::before { background: #00377B; }
+.side-ad-card--camp::before { background: #E31837; }
+.side-ad-card--banr::before { background: #006837; }
+
+.side-ad-logo {
+  width: 48px;
+  height: 34px;
+  object-fit: contain;
+}
+.side-ad-logo-placeholder {
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: white;
+  flex-shrink: 0;
+}
+.side-ad-promo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.3;
+}
+.side-ad-desc {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+.side-ad-cta {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+.side-ad-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  background: #E31837;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+/* Solo mostrar en pantallas anchas */
+@media (max-width: 1399px) {
+  .side-banner { display: none !important; }
+}

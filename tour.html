@@ -348,23 +348,6 @@
         </div>
       </div>
 
-      <!-- Mini chatbot en sidebar -->
-      <div class="sidebar-section">
-        <div class="sidebar-label">Guía360 — Asistente IA</div>
-        <div class="tour-chatbot-msgs" id="tour-chat-msgs">
-          <div class="tour-chatbot-msg-bot">Hola 👋 Pregúntame sobre la Catedral Metropolitana.</div>
-        </div>
-        <div class="tour-chatbot-input">
-          <input type="text" id="tour-chat-input" placeholder="Ej: ¿Cuándo fue construida?">
-          <button id="tour-chat-send" class="chat-send" style="width:32px;height:32px;font-size:0.8rem">➤</button>
-        </div>
-        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
-          <button class="tour-chip" style="padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:100px;background:transparent;color:rgba(255,255,255,0.55);font-size:0.72rem;cursor:pointer" data-msg="Historia">Historia</button>
-          <button class="tour-chip" style="padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:100px;background:transparent;color:rgba(255,255,255,0.55);font-size:0.72rem;cursor:pointer" data-msg="Horarios">Horarios</button>
-          <button class="tour-chip" style="padding:4px 10px;border:1px solid rgba(255,255,255,0.15);border-radius:100px;background:transparent;color:rgba(255,255,255,0.55);font-size:0.72rem;cursor:pointer" data-msg="Curiosidades">Curiosidades</button>
-        </div>
-      </div>
-
       <!-- Links relacionados -->
       <div class="sidebar-section">
         <div class="sidebar-label">Ubicaciones relacionadas</div>
@@ -428,47 +411,6 @@
       if (loading) loading.classList.add('hidden');
     }, 2500);
 
-    // Tour sidebar chatbot
-    const tourInput = document.getElementById('tour-chat-input');
-    const tourSend = document.getElementById('tour-chat-send');
-    const tourMsgs = document.getElementById('tour-chat-msgs');
-
-    function appendTourMsg(text, isUser) {
-      if (!tourMsgs) return;
-      const d = document.createElement('div');
-      d.className = isUser ? 'tour-chatbot-msg-user' : 'tour-chatbot-msg-bot';
-      d.innerHTML = text;
-      tourMsgs.appendChild(d);
-      tourMsgs.scrollTop = tourMsgs.scrollHeight;
-    }
-
-    function getBotResponse(input) {
-      const lower = input.toLowerCase();
-      const r = G360_DATA.chatbot_responses;
-      if (lower.includes('historia')) return r.historia;
-      if (lower.includes('horario') || lower.includes('hora')) return r.horarios;
-      if (lower.includes('curios')) return r.curiosidades;
-      if (lower.includes('lugar') || lower.includes('recomiend')) return r.lugares;
-      return r.default;
-    }
-
-    function sendTourMsg() {
-      if (!tourInput || !tourInput.value.trim()) return;
-      const text = tourInput.value.trim();
-      appendTourMsg(text, true);
-      tourInput.value = '';
-      setTimeout(() => appendTourMsg(getBotResponse(text), false), 500);
-    }
-
-    if (tourSend) tourSend.addEventListener('click', sendTourMsg);
-    if (tourInput) tourInput.addEventListener('keydown', e => { if(e.key==='Enter') sendTourMsg(); });
-
-    document.querySelectorAll('.tour-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        appendTourMsg(chip.dataset.msg, true);
-        setTimeout(() => appendTourMsg(getBotResponse(chip.dataset.msg), false), 400);
-      });
-    });
   });
 </script>
 </body>
