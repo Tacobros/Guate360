@@ -273,6 +273,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; }
   align-items: center;
   background: var(--color-bg-dark);
   overflow: hidden;
+  padding-top: var(--header-height);
 }
 .hero-bg {
   position: absolute;
