@@ -208,17 +208,27 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; }
 }
 .logo-text span { color: var(--color-secondary); }
 
-.nav { display: flex; align-items: center; gap: 8px; }
+.nav { display: flex; align-items: center; gap: 2px; }
 .nav-link {
-  padding: 8px 14px;
+  padding: 7px 9px;
   border-radius: var(--radius-md);
   color: rgba(255,255,255,0.85);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: var(--transition);
 }
 .nav-link:hover, .nav-link.active { color: var(--color-secondary); }
-.nav-cta { margin-left: 8px; }
+.nav-cta { margin-left: 6px; }
+
+/* Hide nav when it overflows — show hamburger earlier */
+@media (max-width: 1180px) {
+  .nav .nav-link { padding: 7px 6px; font-size: 0.77rem; }
+}
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+}
 
 .hamburger {
   display: none;
@@ -1297,8 +1307,6 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; }
 }
 
 @media (max-width: 768px) {
-  .nav { display: none; }
-  .hamburger { display: flex; }
   .section { padding: 56px 0; }
   .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
   .locations-grid { grid-template-columns: 1fr; }
