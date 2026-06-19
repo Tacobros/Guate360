@@ -12,6 +12,7 @@ const I18N = {
     nav_faq: "FAQ",
     nav_contact: "Contacto",
     nav_cta: "Iniciar Recorrido",
+    nav_tour_360: "Ver 360°",
 
     // HERO
     hero_badge: "Plataforma Cultural Digital de Guatemala",
@@ -207,6 +208,7 @@ const I18N = {
     nav_faq: "FAQ",
     nav_contact: "Contact",
     nav_cta: "Start Tour",
+    nav_tour_360: "View 360°",
 
     hero_badge: "Guatemala's Digital Cultural Platform",
     hero_title_1: "Discover Guatemala",
@@ -385,6 +387,7 @@ const I18N = {
     nav_faq: "FAQ",
     nav_contact: "Contact",
     nav_cta: "Commencer la Visite",
+    nav_tour_360: "Voir 360°",
 
     hero_badge: "Plateforme Culturelle Numérique du Guatemala",
     hero_title_1: "Découvrez le Guatemala",

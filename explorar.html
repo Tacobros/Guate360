@@ -20,13 +20,14 @@
         <span class="logo-text" style="color:var(--color-primary)">Guatemala <span>360</span></span>
       </a>
       <nav class="nav">
-        <a href="index.html" class="nav-link" style="color:var(--color-dark)">Inicio</a>
-        <a href="explorar.html" class="nav-link active" style="color:var(--color-primary)">Explorar</a>
-        <a href="tour.html" class="nav-link" style="color:var(--color-dark)">Recorrido Demo</a>
-        <a href="faq.html" class="nav-link" style="color:var(--color-dark)">FAQ</a>
-        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)">Contacto</a>
+        <a href="index.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_home">Inicio</a>
+        <a href="explorar.html" class="nav-link active" style="color:var(--color-primary)" data-i18n="nav_explore">Explorar</a>
+        <a href="tour.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_tour">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_faq">FAQ</a>
+        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_contact">Contacto</a>
+        <div class="lang-switcher"></div>
         <a href="tour.html" class="btn btn--primary btn--sm nav-cta">
-          <i class="fa fa-play"></i> Iniciar Recorrido
+          <i class="fa fa-play"></i> <span data-i18n="nav_cta">Iniciar Recorrido</span>
         </a>
       </nav>
       <button class="hamburger">
@@ -37,11 +38,12 @@
     </div>
   </div>
   <nav class="mobile-nav">
-    <a href="index.html" class="nav-link">Inicio</a>
-    <a href="explorar.html" class="nav-link">Explorar</a>
-    <a href="tour.html" class="nav-link">Recorrido Demo</a>
-    <a href="faq.html" class="nav-link">FAQ</a>
-    <a href="contacto.html" class="nav-link">Contacto</a>
+    <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+    <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+    <a href="tour.html" class="nav-link" data-i18n="nav_tour">Recorrido Demo</a>
+    <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
+    <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    <div class="lang-switcher" style="justify-content:flex-start;margin:8px 0"></div>
   </nav>
 </header>
 
@@ -214,6 +216,7 @@
 </div>
 
 <script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {

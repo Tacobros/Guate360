@@ -255,10 +255,11 @@
         <span class="logo-text" style="color:var(--color-primary)">Guatemala <span>360</span></span>
       </a>
       <nav class="nav" aria-label="Navegación principal">
-        <a href="index.html" class="nav-link" style="color:var(--color-dark)">Inicio</a>
-        <a href="explorar.html" class="nav-link" style="color:var(--color-dark)">Explorar</a>
-        <a href="faq.html" class="nav-link" style="color:var(--color-dark)">FAQ</a>
-        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)">Contacto</a>
+        <a href="index.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_home">Inicio</a>
+        <a href="explorar.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_explore">Explorar</a>
+        <a href="faq.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_faq">FAQ</a>
+        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_contact">Contacto</a>
+        <div class="lang-switcher"></div>
       </nav>
       <button class="hamburger" aria-label="Abrir menú">
         <span style="background:var(--color-dark)"></span>
@@ -268,10 +269,11 @@
     </div>
   </div>
   <nav class="mobile-nav">
-    <a href="index.html" class="nav-link">Inicio</a>
-    <a href="explorar.html" class="nav-link">Explorar</a>
-    <a href="faq.html" class="nav-link">FAQ</a>
-    <a href="contacto.html" class="nav-link">Contacto</a>
+    <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+    <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+    <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
+    <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    <div class="lang-switcher" style="justify-content:flex-start;margin:8px 0"></div>
   </nav>
 </header>
 
@@ -302,7 +304,7 @@
     <div class="panorama-wrap">
       <div class="tour-loading" id="tour-loading">
         <div class="loading-spinner"></div>
-        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6)">Cargando recorrido 360°...</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6)" data-i18n="tour_loading">Cargando recorrido 360°...</div>
         <div style="font-size:0.75rem;color:rgba(255,255,255,0.35)">Catedral Metropolitana · Guatemala</div>
       </div>
       <div id="panorama-container"></div>
@@ -325,7 +327,7 @@
 
       <!-- Scene navigation -->
       <div class="sidebar-section">
-        <div class="sidebar-label">Escenas del recorrido</div>
+        <div class="sidebar-label" data-i18n="tour_scenes_label">Escenas del recorrido</div>
         <div class="scene-nav-list" id="scene-nav">
           <!-- Generado por JS -->
         </div>
@@ -404,6 +406,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 <script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script src="js/tour.js"></script>
 <script>
