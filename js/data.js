@@ -203,7 +203,7 @@ const G360_DATA = {
           id: "escena-fachada",
           titulo: "Fachada Principal",
           descripcion: "Vista exterior de la imponente fachada neoclásica frente a la Plaza de la Constitución.",
-          imagen: "https://pannellum.org/images/cerro-toro.jpg",
+          imagen: "https://raw.githubusercontent.com/mpetroff/pannellum/master/docs/images/cerro-toro.jpg",
           yaw_inicial: 0,
           pitch_inicial: 0,
           hotspots: [
@@ -242,7 +242,7 @@ const G360_DATA = {
           id: "escena-nave-central",
           titulo: "Nave Central",
           descripcion: "El interior de la catedral con su impresionante nave central, columnas y altar mayor.",
-          imagen: "https://pannellum.org/images/alma.jpg",
+          imagen: "https://raw.githubusercontent.com/mpetroff/pannellum/master/docs/images/alma.jpg",
           yaw_inicial: -30,
           pitch_inicial: 0,
           hotspots: [
@@ -290,7 +290,7 @@ const G360_DATA = {
           id: "escena-capilla",
           titulo: "Capilla Lateral y Osarios",
           descripcion: "Una de las capillas laterales de la catedral, donde se conservan osarios de figuras históricas.",
-          imagen: "https://pannellum.org/images/tunnels.jpg",
+          imagen: "https://raw.githubusercontent.com/mpetroff/pannellum/master/docs/images/tunnels.jpg",
           yaw_inicial: 0,
           pitch_inicial: 0,
           hotspots: [
