@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catedral Metropolitana de Guatemala — Ficha Histórica | Guatemala 360</title>
+  <meta name="description" content="Ficha histórica completa de la Catedral Metropolitana de Guatemala. Historia, datos relevantes, curiosidades, recorrido 360° y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .fuentes-list { display:flex; flex-direction:column; gap:8px; }
+    .fuente-item {
+      display:flex; align-items:flex-start; gap:10px;
+      padding:10px 14px; border-radius:var(--radius-md);
+      background:var(--color-bg-light); border:1px solid var(--color-border);
+      font-size:0.82rem; color:var(--color-mid);
+    }
+    .fuente-icon { color:var(--color-secondary); flex-shrink:0; margin-top:2px; }
+    .related-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    @media(max-width:600px){ .related-grid{grid-template-columns:1fr;} }
+
+    /* Gallery placeholder */
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
+    .gallery-item {
+      aspect-ratio:4/3; border-radius:var(--radius-md);
+      background:linear-gradient(135deg,#1B4D3E,#2A6E57);
+      display:flex; align-items:center; justify-content:center;
+      font-size:2rem; cursor:pointer; transition:var(--transition);
+      overflow:hidden; position:relative;
+    }
+    .gallery-item:hover { transform:scale(1.02); }
+    .gallery-item-label {
+      position:absolute; bottom:6px; left:0; right:0;
+      text-align:center; font-size:0.65rem; color:rgba(255,255,255,0.6);
+    }
+    @media(max-width:600px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+
+    /* Preview 360 */
+    .tour-preview-card {
+      background:var(--color-bg-dark);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      margin-bottom:16px;
+    }
+    .tour-preview-img {
+      width:100%; height:160px;
+      background:linear-gradient(135deg,#0D2818,#1B4D3E);
+      display:flex; align-items:center; justify-content:center;
+      font-size:3rem; position:relative;
+    }
+    .tour-preview-badge {
+      position:absolute; top:10px; right:10px;
+      background:rgba(200,168,75,0.9); color:#1a1a2e;
+      padding:3px 10px; border-radius:100px;
+      font-size:0.7rem; font-weight:700;
+    }
+    .tour-preview-body { padding:16px 18px; }
+    .tour-preview-title { font-weight:700; font-size:0.9rem; color:white; margin-bottom:4px; }
+    .tour-preview-sub { font-size:0.75rem; color:rgba(255,255,255,0.45); margin-bottom:14px; }
+  </style>
+</head>
+<body>
+
+<header class="header header--light" id="main-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🗺️</div>
+        <span class="logo-text" style="color:var(--color-primary)">Guatemala <span>360</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link" style="color:var(--color-dark)">Inicio</a>
+        <a href="explorar.html" class="nav-link" style="color:var(--color-dark)">Explorar</a>
+        <a href="tour.html" class="nav-link" style="color:var(--color-dark)">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link" style="color:var(--color-dark)">FAQ</a>
+        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)">Contacto</a>
+        <a href="tour.html" class="btn btn--primary btn--sm">
+          <i class="fa fa-street-view"></i> Ver 360°
+        </a>
+      </nav>
+      <button class="hamburger">
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="explorar.html" class="nav-link">Explorar</a>
+    <a href="tour.html" class="nav-link">Ver 360°</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+</header>
+
+<!-- FICHA HERO -->
+<div class="ficha-hero">
+  <div class="container">
+    <nav class="ficha-breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="separator">›</span>
+      <a href="explorar.html">Explorar</a>
+      <span class="separator">›</span>
+      <a href="explorar.html">Guatemala</a>
+      <span class="separator">›</span>
+      <span style="color:rgba(255,255,255,0.8)">Catedral Metropolitana</span>
+    </nav>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+      <span class="badge badge--green">● Disponible</span>
+      <span class="badge badge--gold">⛪ Catedral</span>
+      <span class="badge badge--gold">🏛️ Mixto (Interior/Exterior)</span>
+    </div>
+    <h1 class="ficha-title">Catedral Metropolitana<br>de Guatemala</h1>
+    <p style="color:rgba(255,255,255,0.7);font-size:1rem;max-width:600px;line-height:1.7">
+      El principal templo católico de la capital guatemalteca, construido en el siglo XVIII frente a la Plaza de la Constitución. Un emblema del patrimonio colonial centroamericano.
+    </p>
+    <div class="ficha-meta-row">
+      <div class="ficha-meta-item"><i class="fa fa-map-marker-alt" style="color:var(--color-secondary)"></i> <strong>Guatemala Ciudad</strong></div>
+      <div class="ficha-meta-item"><i class="fa fa-landmark" style="color:var(--color-secondary)"></i> Departamento de <strong>Guatemala</strong></div>
+      <div class="ficha-meta-item"><i class="fa fa-calendar" style="color:var(--color-secondary)"></i> Construcción: <strong>1782–1867</strong></div>
+      <div class="ficha-meta-item"><i class="fa fa-star" style="color:var(--color-secondary)"></i> Patrimonio <strong>cultural nacional</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- FICHA BODY -->
+<section class="section">
+  <div class="container">
+    <div class="ficha-layout">
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div>
+
+        <!-- HISTORIA -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">Historia</h2>
+          <div class="ficha-text">
+            <p>La Catedral Metropolitana de Santiago de Guatemala es el principal templo católico de la capital y uno de los edificios más representativos de la arquitectura colonial en América Central. Su construcción inició en 1782 y concluyó en 1867, después de múltiples interrupciones causadas por terremotos y dificultades económicas.</p>
+            <br>
+            <p>El edificio fue diseñado en estilo neoclásico con influencias barrocas coloniales. Su fachada principal cuenta con tres cuerpos verticales flanqueados por dos torres simétricas. A lo largo de los siglos ha sido restaurada en múltiples ocasiones, especialmente tras los terremotos de 1917-1918 y el devastador terremoto de 1976 que afectó gran parte de la infraestructura colonial guatemalteca.</p>
+            <br>
+            <p>En sus osarios se conservan los restos de figuras históricas importantes para Guatemala, convirtiéndola en un sitio de memoria histórica además de culto religioso. La catedral comparte la Plaza de la Constitución con el Palacio Nacional de la Cultura, conformando el corazón cívico e histórico de la nación.</p>
+          </div>
+          <div style="margin-top:16px;padding:14px 18px;background:rgba(200,168,75,0.08);border-left:3px solid var(--color-secondary);border-radius:0 var(--radius-md) var(--radius-md) 0">
+            <p style="font-size:0.8rem;color:var(--color-muted);font-style:italic">⚠️ <strong>Nota demo:</strong> Este contenido histórico es ilustrativo y está pendiente de validación por un historiador certificado antes de su publicación oficial.</p>
+          </div>
+        </div>
+
+        <!-- GALERÍA -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">Galería</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">⛪<div class="gallery-item-label">Fachada principal</div></div>
+            <div class="gallery-item">🏛️<div class="gallery-item-label">Nave central</div></div>
+            <div class="gallery-item">🔔<div class="gallery-item-label">Torres campanario</div></div>
+            <div class="gallery-item">✨<div class="gallery-item-label">Altar mayor</div></div>
+            <div class="gallery-item">🎨<div class="gallery-item-label">Capilla lateral</div></div>
+            <div class="gallery-item">🌇<div class="gallery-item-label">Vista nocturna</div></div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--color-muted);margin-top:10px">📸 Imágenes reales pendientes de sesión fotográfica profesional 360°</p>
+        </div>
+
+        <!-- CURIOSIDADES -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">Curiosidades</h2>
+          <div class="curiosidad-card">
+            <span class="curiosidad-icon">📜</span>
+            <p class="curiosidad-text">Los osarios debajo del altar mayor guardan restos de personalidades históricas de la época colonial y republicana guatemalteca. [Dato simulado — demo]</p>
+          </div>
+          <div class="curiosidad-card">
+            <span class="curiosidad-icon">🏗️</span>
+            <p class="curiosidad-text">Fue construida en el lugar donde existía una iglesia anterior destruida por los terremotos de Santa Marta en 1773. [Dato simulado — demo]</p>
+          </div>
+          <div class="curiosidad-card">
+            <span class="curiosidad-icon">🔔</span>
+            <p class="curiosidad-text">Sus campanas originales fueron fundidas con una mezcla especial de plata y bronce para mejorar su resonancia y tonalidad. [Dato simulado — demo]</p>
+          </div>
+        </div>
+
+        <!-- FAQ DE LA UBICACIÓN -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">Preguntas frecuentes sobre este lugar</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question">¿Cuándo está abierta la Catedral Metropolitana?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">La Catedral Metropolitana generalmente abre de lunes a domingo de 6:00 AM a 7:00 PM. Los horarios de misas y eventos especiales pueden variar. Se recomienda verificar directamente con la institución antes de visitar.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">¿Tiene costo la entrada?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">El acceso a la Catedral Metropolitana es generalmente gratuito para el público. Algunos eventos, visitas guiadas especiales o áreas restringidas pueden tener costo. [Pendiente de verificación]</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">¿Cómo llegar desde el aeropuerto?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Desde el Aeropuerto Internacional La Aurora se puede llegar en taxi (aproximadamente 20-30 minutos según el tráfico), Uber o transmetro. La Catedral está ubicada en la Zona 1, frente a la Plaza de la Constitución. [Información referencial]</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">¿Se puede fotografiar el interior?
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Generalmente se permite fotografía no flash en el interior para uso personal. Para fotografía profesional, producciones audiovisuales o fotografía 360°, se requiere autorización previa de la Arquidiócesis de Guatemala. [Verificar con la institución]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUENTES -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">Fuentes y referencias</h2>
+          <div class="fuentes-list">
+            <div class="fuente-item">
+              <i class="fa fa-book fuente-icon"></i>
+              <div>IDAEH — Instituto de Antropología e Historia de Guatemala <em>[Fuente simulada — demo]</em></div>
+            </div>
+            <div class="fuente-item">
+              <i class="fa fa-landmark fuente-icon"></i>
+              <div>Fundación para la Conservación del Centro Histórico de Guatemala <em>[Fuente simulada — demo]</em></div>
+            </div>
+            <div class="fuente-item">
+              <i class="fa fa-university fuente-icon"></i>
+              <div>Arquidiócesis de Guatemala — Archivos históricos <em>[Fuente simulada — demo]</em></div>
+            </div>
+          </div>
+          <p style="margin-top:14px;font-size:0.8rem;color:var(--color-muted)">Toda la información publicada en Guatemala 360 es investigada y validada por historiadores y expertos antes de su publicación.</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="ficha-sidebar">
+
+        <!-- Tour 360 CTA -->
+        <div class="tour-preview-card">
+          <div class="tour-preview-img">
+            ⛪
+            <span class="tour-preview-badge">360°</span>
+          </div>
+          <div class="tour-preview-body">
+            <div class="tour-preview-title">Recorrido Virtual Disponible</div>
+            <div class="tour-preview-sub">3 escenas · 8+ hotspots informativos</div>
+            <a href="tour.html" class="btn btn--primary" style="width:100%;justify-content:center">
+              <i class="fa fa-street-view"></i> Iniciar Recorrido 360°
+            </a>
+          </div>
+        </div>
+
+        <!-- Datos del lugar -->
+        <div class="ficha-card">
+          <div class="ficha-card-title">
+            <i class="fa fa-info-circle" style="color:var(--color-secondary)"></i>
+            Datos del lugar
+          </div>
+          <div class="data-list">
+            <div class="data-row">
+              <span class="data-label">Departamento</span>
+              <span class="data-value">Guatemala</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Municipio</span>
+              <span class="data-value">Ciudad de Guatemala</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Tipo</span>
+              <span class="data-value">Catedral</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Inicio construcción</span>
+              <span class="data-value">1782</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Conclusión</span>
+              <span class="data-value">1867</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Estilo</span>
+              <span class="data-value">Neoclásico / Barroco</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Acceso</span>
+              <span class="data-value">Interior y exterior</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Declaratoria</span>
+              <span class="data-value">Patrimonio cultural</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa (placeholder) -->
+        <div class="ficha-card">
+          <div class="ficha-card-title">
+            <i class="fa fa-map-marker-alt" style="color:var(--color-secondary)"></i>
+            Ubicación
+          </div>
+          <div style="width:100%;height:160px;background:linear-gradient(135deg,#1B4D3E,#2A6E57);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,0.7);font-size:0.8rem;margin-bottom:12px">
+            <span style="font-size:2rem">🗺️</span>
+            <span>Mapa interactivo</span>
+            <span style="font-size:0.7rem;opacity:0.6">Próximamente</span>
+          </div>
+          <p style="font-size:0.8rem;color:var(--color-mid)">📍 Plaza de la Constitución, Zona 1, Ciudad de Guatemala</p>
+          <p style="font-size:0.75rem;color:var(--color-muted);margin-top:4px">Coordenadas: 14.6349° N, 90.5134° O</p>
+        </div>
+
+        <!-- Horarios -->
+        <div class="ficha-card">
+          <div class="ficha-card-title">
+            <i class="fa fa-clock" style="color:var(--color-secondary)"></i>
+            Información práctica
+          </div>
+          <div class="data-list">
+            <div class="data-row">
+              <span class="data-label">Horario</span>
+              <span class="data-value">6:00 AM – 7:00 PM</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Días</span>
+              <span class="data-value">Lun – Dom</span>
+            </div>
+            <div class="data-row">
+              <span class="data-label">Entrada</span>
+              <span class="data-value">Gratuita</span>
+            </div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--color-muted);margin-top:12px">⚠️ Verificar con la institución antes de visitar. [Datos simulados]</p>
+        </div>
+
+        <!-- Compartir -->
+        <div class="ficha-card">
+          <div class="ficha-card-title">
+            <i class="fa fa-share-alt" style="color:var(--color-secondary)"></i>
+            Compartir
+          </div>
+          <div style="display:flex;gap:8px">
+            <a href="#" class="social-link" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Compartir en Twitter/X"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link" aria-label="Copiar enlace"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- UBICACIONES RELACIONADAS -->
+    <div style="margin-top:64px">
+      <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:8px">Lugares relacionados</h2>
+      <p style="color:var(--color-muted);margin-bottom:32px;font-size:0.9rem">También podrías interesarte en estos destinos</p>
+      <div class="related-grid">
+        <div class="location-card">
+          <div class="card-img-wrap">🏛️
+            <div class="card-badge-wrap"><span class="badge badge--coming">◌ Próximamente</span></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Guatemala</span><span class="card-meta-dot"></span><span>Ciudad de Guatemala</span></div>
+            <h3 class="card-title">Palacio Nacional de la Cultura</h3>
+            <p class="card-desc">Imponente edificio de mármol verde, sede del Museo Nacional del Palacio.</p>
+            <div class="card-footer">
+              <span class="card-category">📍 Edificio histórico</span>
+              <a href="explorar.html" class="btn btn--ghost btn--sm" style="font-size:0.8rem">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="card-img-wrap">🏰
+            <div class="card-badge-wrap"><span class="badge badge--green">● Disponible</span></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Sacatepéquez</span><span class="card-meta-dot"></span><span>Antigua Guatemala</span></div>
+            <h3 class="card-title">Arco de Santa Catalina</h3>
+            <p class="card-desc">Icónico arco colonial del siglo XVII, símbolo de Antigua Guatemala.</p>
+            <div class="card-footer">
+              <span class="card-category">📍 Arquitectura colonial</span>
+              <a href="ubicacion.html" class="btn btn--ghost btn--sm" style="font-size:0.8rem">Ver ficha</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🗺️</div>
+          <span class="logo-text">Guatemala <span>360</span></span>
+        </a>
+        <p>Plataforma digital para explorar el patrimonio cultural e histórico de Guatemala.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explorar</div>
+        <ul class="footer-links">
+          <li><a href="explorar.html">Todas las ubicaciones</a></li>
+          <li><a href="tour.html">Recorrido demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Información</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Guatemala 360. Contenido sujeto a validación histórica.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title"></h3>
+      <button class="modal-close" id="modal-close">✕</button>
+    </div>
+    <div class="modal-img-placeholder" id="modal-image"></div>
+    <div class="modal-body">
+      <p class="modal-text" id="modal-text"></p>
+      <p class="modal-source" id="modal-source"></p>
+    </div>
+  </div>
+</div>
+
+<!-- CHATBOT WIDGET -->
+<div class="chatbot-widget">
+  <div class="chatbot-panel">
+    <button class="chatbot-panel-close">✕</button>
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name">Guía360</div>
+        <div class="chat-status">Asistente virtual</div>
+      </div>
+    </div>
+    <div class="chat-messages"></div>
+    <div style="padding:0 16px 10px;display:flex;gap:6px;flex-wrap:wrap">
+      <button class="chat-chip" style="padding:5px 10px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.65);font-size:0.72rem;cursor:pointer">Historia</button>
+      <button class="chat-chip" style="padding:5px 10px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.65);font-size:0.72rem;cursor:pointer">Horarios</button>
+      <button class="chat-chip" style="padding:5px 10px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.65);font-size:0.72rem;cursor:pointer">Curiosidades</button>
+    </div>
+    <div class="chat-input-area">
+      <input class="chat-input" type="text" placeholder="Pregunta sobre la Catedral...">
+      <button class="chat-send">➤</button>
+    </div>
+  </div>
+  <button class="chatbot-toggle">💬</button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

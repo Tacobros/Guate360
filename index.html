@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guatemala 360 — Explora el Patrimonio Cultural de Guatemala</title>
+  <meta name="description" content="Recorre virtualmente los lugares más emblemáticos, históricos y culturales de Guatemala. Una experiencia 360° educativa e inmersiva para turistas, estudiantes e instituciones.">
+  <meta property="og:title" content="Guatemala 360 — Explora el Patrimonio Cultural">
+  <meta property="og:description" content="Recorridos virtuales 360° de los lugares más emblemáticos de Guatemala.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Tour preview card on hero */
+    .preview-360 {
+      width:100%; height:180px;
+      background: linear-gradient(135deg,#0D2818,#1B4D3E);
+      position:relative; overflow:hidden; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .preview-360-label {
+      position:absolute; inset:0; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:8px; color:white;
+    }
+    .preview-360-icon { font-size:2.5rem; }
+    .preview-360-text { font-size:0.8rem; opacity:0.7; letter-spacing:0.1em; text-transform:uppercase; }
+    .preview-360-badge {
+      position:absolute; bottom:12px; right:12px;
+      background:rgba(200,168,75,0.9); color:#1A1A2E;
+      padding:4px 10px; border-radius:100px; font-size:0.7rem; font-weight:700;
+    }
+    .value-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .value-card {
+      padding:32px 28px; border-radius:var(--radius-lg); text-align:center;
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+      transition:var(--transition);
+    }
+    .value-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(200,168,75,0.3); }
+    .value-icon { font-size:2.5rem; margin-bottom:16px; }
+    .value-title { font-family:var(--font-heading); font-size:1.1rem; font-weight:700; color:white; margin-bottom:10px; }
+    .value-desc { font-size:0.875rem; color:rgba(255,255,255,0.6); line-height:1.7; }
+    @media(max-width:768px){ .value-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="main-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🗺️</div>
+        <span class="logo-text">Guatemala <span>360</span></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="explorar.html" class="nav-link">Explorar</a>
+        <a href="tour.html" class="nav-link">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="tour.html" class="btn btn--primary btn--sm nav-cta">
+          <i class="fa fa-play"></i> Iniciar Recorrido
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Menú móvil">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="explorar.html" class="nav-link">Explorar</a>
+    <a href="tour.html" class="nav-link">Recorrido Demo</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+    <a href="tour.html" class="btn btn--primary btn--sm" style="margin-top:8px">Iniciar Recorrido</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa fa-globe"></i>
+        Plataforma Cultural Digital de Guatemala
+      </div>
+      <h1 class="hero-title">
+        Descubre Guatemala<br>
+        <span class="highlight">desde cualquier lugar</span><br>
+        del mundo
+      </h1>
+      <p class="hero-description">
+        Explora lugares turísticos, históricos y patrimoniales de Guatemala mediante recorridos virtuales 360° interactivos. Aprende, descubre y conecta con la riqueza cultural del país.
+      </p>
+      <div class="hero-actions">
+        <a href="tour.html" class="btn btn--primary btn--lg">
+          <i class="fa fa-play-circle"></i> Iniciar Recorrido Demo
+        </a>
+        <a href="explorar.html" class="btn btn--outline btn--lg">
+          <i class="fa fa-map-marker-alt"></i> Ver Ubicaciones
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-number">22</div>
+          <div class="hero-stat-label">Departamentos de Guatemala</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">360°</div>
+          <div class="hero-stat-label">Experiencia inmersiva</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">100%</div>
+          <div class="hero-stat-label">Contenido verificado</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">IA</div>
+          <div class="hero-stat-label">Guía educativa virtual</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Floating card -->
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="preview-360">
+        <div class="preview-360-label">
+          <span class="preview-360-icon">⛪</span>
+          <span class="preview-360-text">Catedral Metropolitana</span>
+        </div>
+        <span class="preview-360-badge">360° DEMO</span>
+      </div>
+      <div class="hero-card-body">
+        <div class="hero-card-title">Catedral Metropolitana</div>
+        <div class="hero-card-sub">Guatemala Ciudad · Catedral · Disponible</div>
+        <a href="tour.html" class="btn btn--primary btn--sm" style="margin-top:14px;width:100%;justify-content:center">
+          <i class="fa fa-street-view"></i> Explorar ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <div class="stat-item-number">6</div>
+        <div class="stat-item-label">Ubicaciones registradas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item-number">3</div>
+        <div class="stat-item-label">Escenas en recorrido piloto</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item-number">10+</div>
+        <div class="stat-item-label">Hotspots informativos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item-number">1</div>
+        <div class="stat-item-label">Asistente IA educativo</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROPUESTA DE VALOR -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">¿Por qué Guatemala 360?</p>
+      <h2 class="section-title" style="color:white">Una plataforma para todos</h2>
+      <p class="section-subtitle">Diseñada para turistas, estudiantes, investigadores, instituciones y guatemaltecos en todo el mundo</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">✈️</div>
+        <h3 class="value-title">Turistas</h3>
+        <p class="value-desc">Planifica tu viaje explorando virtualmente los destinos antes de llegar. Descubre historia, logística y atractivos de cada lugar.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎓</div>
+        <h3 class="value-title">Estudiantes y Docentes</h3>
+        <p class="value-desc">Recurso educativo visual con información verificada. Ideal para clases de historia, cultura y geografía de Guatemala.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <h3 class="value-title">Investigadores</h3>
+        <p class="value-desc">Consulta fichas históricas detalladas con fuentes bibliográficas verificadas por expertos en patrimonio cultural.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <h3 class="value-title">Guatemaltecos en el exterior</h3>
+        <p class="value-desc">Mantén la conexión con tu país. Recorre los lugares de tu infancia y descubre patrimonio que quizás no conocías.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🏛️</div>
+        <h3 class="value-title">Instituciones</h3>
+        <p class="value-desc">Vitrina digital para museos, iglesias, municipalidades y espacios culturales. Aumenta tu visibilidad nacional e internacional.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📸</div>
+        <h3 class="value-title">Preservación Cultural</h3>
+        <p class="value-desc">Documentamos y preservamos digitalmente el patrimonio guatemalteco para las generaciones futuras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">Cómo funciona</p>
+      <h2 class="section-title">Explorar nunca fue tan fácil</h2>
+      <p class="section-subtitle">En solo 4 pasos puedes recorrer virtualmente cualquier lugar</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon">🗺️</div>
+        <h3 class="step-title">Elige un lugar</h3>
+        <p class="step-desc">Navega por departamentos, tipo de estructura o usa el buscador para encontrar tu destino.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon">🖥️</div>
+        <h3 class="step-title">Abre el recorrido</h3>
+        <p class="step-desc">Ingresa al visor 360° del lugar seleccionado. Compatible con celular, tablet y computadora.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon">💡</div>
+        <h3 class="step-title">Explora los hotspots</h3>
+        <p class="step-desc">Toca los puntos informativos para conocer la historia, datos arquitectónicos y curiosidades del lugar.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-icon">🤖</div>
+        <h3 class="step-title">Pregúntale al guía IA</h3>
+        <p class="step-desc">Usa el chatbot Guía360 para hacer preguntas sobre el lugar. Respuestas basadas en información verificada.</p>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:48px">
+      <a href="tour.html" class="btn btn--primary btn--lg">
+        <i class="fa fa-play-circle"></i> Probar ahora — Catedral Metropolitana
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACIONES DESTACADAS -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+      <div>
+        <p class="section-label">Destinos</p>
+        <h2 class="section-title">Ubicaciones disponibles</h2>
+      </div>
+      <a href="explorar.html" class="btn btn--outline-dark">Ver todas <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="locations-grid" id="home-locations"></div>
+  </div>
+</section>
+
+<!-- EXPLORAR POR TIPO -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">Categorías</p>
+      <h2 class="section-title">Explora por tipo de lugar</h2>
+      <p class="section-subtitle">Desde templos coloniales hasta maravillas arqueológicas mayas</p>
+    </div>
+    <div class="categories-grid">
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">⛪</div>
+        <div class="category-name">Catedrales</div>
+        <div class="category-count">1 disponible</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🏛️</div>
+        <div class="category-name">Edificios históricos</div>
+        <div class="category-count">1 disponible</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🏯</div>
+        <div class="category-name">Ruinas arqueológicas</div>
+        <div class="category-count">Próximamente</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🌋</div>
+        <div class="category-name">Áreas naturales</div>
+        <div class="category-count">Próximamente</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🎨</div>
+        <div class="category-name">Mercados tradicionales</div>
+        <div class="category-count">Próximamente</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🏰</div>
+        <div class="category-name">Arquitectura colonial</div>
+        <div class="category-count">1 disponible</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🖼️</div>
+        <div class="category-name">Museos</div>
+        <div class="category-count">Próximamente</div>
+      </a>
+      <a href="explorar.html" class="category-card">
+        <div class="category-icon">🌳</div>
+        <div class="category-name">Plazas y parques</div>
+        <div class="category-count">Próximamente</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORAR POR DEPARTAMENTO -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">Guatemala</p>
+      <h2 class="section-title" style="color:white">Explora por departamento</h2>
+      <p class="section-subtitle">22 departamentos, incontables historias por descubrir</p>
+    </div>
+    <div class="departments-grid" id="depts-grid"></div>
+  </div>
+</section>
+
+<!-- CHATBOT SECTION -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="chatbot-section">
+      <div>
+        <p class="section-label">Asistente IA</p>
+        <h2 class="section-title">Conoce a Guía360</h2>
+        <p class="section-subtitle">Tu guía virtual educativa del patrimonio guatemalteco. Pregúntale lo que quieras sobre los lugares de la plataforma.</p>
+        <ul style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
+            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
+            <span>Responde solo con información verificada de la base de conocimiento</span>
+          </li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
+            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
+            <span>Sugiere lugares relacionados y rutas para visitar</span>
+          </li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
+            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
+            <span>Explica contexto histórico, arquitectónico y cultural</span>
+          </li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:var(--color-mid)">
+            <span style="color:var(--color-primary);font-size:1.1rem">✓</span>
+            <span>Indica claramente cuando no tiene información disponible</span>
+          </li>
+        </ul>
+        <button class="btn btn--primary" onclick="document.querySelector('.chatbot-toggle').click()">
+          <i class="fa fa-comments"></i> Hablar con Guía360
+        </button>
+      </div>
+      <!-- Preview del chat -->
+      <div class="chatbot-preview">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div>
+            <div class="chat-name">Guía360</div>
+            <div class="chat-status">En línea ahora</div>
+          </div>
+        </div>
+        <div class="chat-messages">
+          <div class="chat-msg chat-msg--bot">¡Hola! Soy Guía360, tu asistente virtual del patrimonio guatemalteco 🇬🇹 ¿Qué quieres saber sobre nuestros lugares?</div>
+          <div class="chat-msg chat-msg--user">¿Cuándo fue construida la Catedral?</div>
+          <div class="chat-msg chat-msg--bot">La Catedral Metropolitana inició su construcción en <strong>1782</strong> y fue concluida en <strong>1867</strong>. Fue diseñada en estilo neoclásico con influencias barrocas coloniales. 📜 <em>[Fuente: IDAEH]</em></div>
+          <div class="chat-msg chat-msg--user">¿Qué otros lugares hay cerca?</div>
+          <div class="chat-msg chat-msg--bot">¡A solo pasos de la Catedral está el Palacio Nacional de la Cultura! Ambos están frente a la Plaza de la Constitución. Te recomiendo visitarlos juntos. 🏛️</div>
+        </div>
+        <div class="chat-input-area">
+          <input class="chat-input" type="text" placeholder="Escribe tu pregunta..." readonly>
+          <button class="chat-send">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section section--green">
+  <div class="container text-center">
+    <p class="section-label" style="color:rgba(255,255,255,0.6)">¿Listo para explorar?</p>
+    <h2 class="section-title" style="color:white">Guatemala te espera. Sin salir de casa.</h2>
+    <p class="section-subtitle">Comienza con nuestra demo de la Catedral Metropolitana y descubre la experiencia completa.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="tour.html" class="btn btn--primary btn--lg">
+        <i class="fa fa-street-view"></i> Recorrido Demo 360°
+      </a>
+      <a href="contacto.html" class="btn btn--outline btn--lg">
+        <i class="fa fa-envelope"></i> Contactar para alianza
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo" style="margin-bottom:8px">
+          <div class="logo-icon">🗺️</div>
+          <span class="logo-text">Guatemala <span>360</span></span>
+        </a>
+        <p>Plataforma digital para explorar, aprender y preservar el patrimonio cultural, histórico y turístico de Guatemala mediante recorridos virtuales 360°.</p>
+        <div class="social-links" style="margin-top:20px">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Explorar</div>
+        <ul class="footer-links">
+          <li><a href="explorar.html">Todas las ubicaciones</a></li>
+          <li><a href="explorar.html">Por departamento</a></li>
+          <li><a href="explorar.html">Por tipo de lugar</a></li>
+          <li><a href="tour.html">Recorrido demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Información</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="ubicacion.html">Ficha de ejemplo</a></li>
+          <li><a href="contacto.html">Proponer ubicación</a></li>
+          <li><a href="contacto.html">Alianzas</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-links">
+          <li><a href="contacto.html">Formulario de contacto</a></li>
+          <li><a href="contacto.html">Prensa y medios</a></li>
+          <li><a href="contacto.html">Instituciones</a></li>
+        </ul>
+        <div style="margin-top:20px;font-size:0.8rem;color:rgba(255,255,255,0.4)">
+          <div>Guatemala, C.A.</div>
+          <div style="margin-top:4px">© 2026 Guatemala 360</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Guatemala 360. Todos los derechos reservados. Contenido sujeto a validación histórica.</p>
+      <div style="display:flex;gap:20px">
+        <a href="#" style="font-size:0.8rem;color:rgba(255,255,255,0.4)">Privacidad</a>
+        <a href="#" style="font-size:0.8rem;color:rgba(255,255,255,0.4)">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CHATBOT WIDGET FLOTANTE -->
+<div class="chatbot-widget">
+  <div class="chatbot-panel" id="chatbot-panel">
+    <button class="chatbot-panel-close" id="chatbot-close">✕</button>
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name">Guía360</div>
+        <div class="chat-status">Asistente virtual</div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages-widget">
+    </div>
+    <div style="padding:0 16px 12px;display:flex;gap:8px;flex-wrap:wrap">
+      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Historia</button>
+      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Horarios</button>
+      <button class="chat-chip" style="padding:6px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;background:transparent;color:rgba(255,255,255,0.7);font-size:0.75rem;cursor:pointer">Lugares similares</button>
+    </div>
+    <div class="chat-input-area">
+      <input class="chat-input" type="text" placeholder="Pregunta sobre Guatemala...">
+      <button class="chat-send">➤</button>
+    </div>
+  </div>
+  <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Abrir chat con Guía360">
+    💬
+  </button>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Título</h3>
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="modal-img-placeholder" id="modal-image">🏛️</div>
+    <div class="modal-body">
+      <p class="modal-text" id="modal-text"></p>
+      <p class="modal-source" id="modal-source"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Render home locations (primeras 3)
+  document.addEventListener('DOMContentLoaded', () => {
+    const homeGrid = document.getElementById('home-locations');
+    if (homeGrid && typeof G360_DATA !== 'undefined') {
+      renderLocationCards(G360_DATA.ubicaciones.slice(0, 3), 'home-locations');
+    }
+    // Render departments
+    const deptsGrid = document.getElementById('depts-grid');
+    if (deptsGrid && typeof G360_DATA !== 'undefined') {
+      G360_DATA.departamentos.forEach(d => {
+        deptsGrid.innerHTML += `
+          <a href="explorar.html" class="dept-card">
+            <div style="font-size:1.5rem;margin-bottom:6px">${d.emoji}</div>
+            <div class="dept-name">${d.nombre}</div>
+            <div class="dept-count">${d.count > 0 ? d.count + ' lugar' + (d.count > 1 ? 'es' : '') : 'Próximamente'}</div>
+          </a>
+        `;
+      });
+    }
+  });
+</script>
+</body>
+</html>

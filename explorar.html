@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar Ubicaciones — Guatemala 360</title>
+  <meta name="description" content="Explora lugares turísticos, históricos y culturales de Guatemala. Filtra por departamento, tipo de estructura y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header header--light" id="main-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🗺️</div>
+        <span class="logo-text" style="color:var(--color-primary)">Guatemala <span>360</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link" style="color:var(--color-dark)">Inicio</a>
+        <a href="explorar.html" class="nav-link active" style="color:var(--color-primary)">Explorar</a>
+        <a href="tour.html" class="nav-link" style="color:var(--color-dark)">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link" style="color:var(--color-dark)">FAQ</a>
+        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)">Contacto</a>
+        <a href="tour.html" class="btn btn--primary btn--sm nav-cta">
+          <i class="fa fa-play"></i> Iniciar Recorrido
+        </a>
+      </nav>
+      <button class="hamburger">
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="explorar.html" class="nav-link">Explorar</a>
+    <a href="tour.html" class="nav-link">Recorrido Demo</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="ficha-breadcrumb" style="justify-content:center">
+      <a href="index.html">Inicio</a>
+      <span class="separator">›</span>
+      <span style="color:rgba(255,255,255,0.7)">Explorar</span>
+    </nav>
+    <p class="section-label">Destinos</p>
+    <h1 class="section-title" style="color:white">Explorar Guatemala</h1>
+    <p class="section-subtitle" style="margin:0 auto">Descubre lugares turísticos, históricos y culturales en todo el país</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <!-- FILTROS -->
+    <div class="filters-bar">
+      <div class="filters-row">
+        <div class="search-input-wrap">
+          <i class="fa fa-search search-icon"></i>
+          <input type="text" class="search-input" id="search-input" placeholder="Buscar por nombre, departamento o tipo...">
+        </div>
+        <select class="filter-select" id="filter-depto">
+          <option value="">Todos los departamentos</option>
+          <option value="guatemala">Guatemala</option>
+          <option value="sacatepéquez">Sacatepéquez</option>
+          <option value="petén">Petén</option>
+          <option value="quiché">Quiché</option>
+          <option value="sololá">Sololá</option>
+        </select>
+        <select class="filter-select" id="filter-tipo">
+          <option value="">Todos los tipos</option>
+          <option value="catedral">Catedrales</option>
+          <option value="edificio">Edificios históricos</option>
+          <option value="ruinas">Ruinas arqueológicas</option>
+          <option value="mercado">Mercados</option>
+          <option value="natural">Áreas naturales</option>
+          <option value="arco">Arquitectura colonial</option>
+        </select>
+        <select class="filter-select" id="filter-acceso">
+          <option value="">Interior / Exterior</option>
+          <option value="interior">Solo interior</option>
+          <option value="exterior">Solo exterior</option>
+          <option value="mixto">Mixto</option>
+        </select>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <span style="font-size:0.8rem;color:var(--color-muted)">Estado:</span>
+        <button class="filter-tag active" data-filter="all">Todos</button>
+        <button class="filter-tag" data-filter="disponible">● Disponibles</button>
+        <button class="filter-tag" data-filter="proximamente">◌ Próximamente</button>
+        <span style="margin-left:auto;font-size:0.85rem;color:var(--color-muted)" id="results-count">6 ubicaciones encontradas</span>
+      </div>
+    </div>
+
+    <!-- CATEGORÍAS RÁPIDAS -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px">
+      <a href="#" onclick="document.getElementById('filter-tipo').value='catedral';document.getElementById('filter-tipo').dispatchEvent(new Event('change'));return false" class="badge badge--green" style="cursor:pointer;padding:8px 16px">⛪ Catedrales</a>
+      <a href="#" onclick="document.getElementById('filter-tipo').value='edificio';document.getElementById('filter-tipo').dispatchEvent(new Event('change'));return false" class="badge badge--gold" style="cursor:pointer;padding:8px 16px">🏛️ Edificios</a>
+      <a href="#" onclick="document.getElementById('filter-tipo').value='ruinas';document.getElementById('filter-tipo').dispatchEvent(new Event('change'));return false" class="badge badge--red" style="cursor:pointer;padding:8px 16px">🏯 Ruinas</a>
+      <a href="#" onclick="document.getElementById('filter-tipo').value='';document.getElementById('filter-tipo').dispatchEvent(new Event('change'));return false" class="badge badge--coming" style="cursor:pointer;padding:8px 16px">✕ Limpiar filtro</a>
+    </div>
+
+    <!-- GRID DE UBICACIONES -->
+    <div class="locations-grid" id="locations-grid">
+      <!-- Generado por JS -->
+    </div>
+
+    <!-- COMING SOON NOTICE -->
+    <div style="margin-top:48px;padding:32px;background:var(--color-light);border-radius:var(--radius-lg);text-align:center;border:2px dashed var(--color-border)">
+      <div style="font-size:2rem;margin-bottom:12px">🗺️</div>
+      <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:8px">Más ubicaciones próximamente</h3>
+      <p style="font-size:0.875rem;color:var(--color-muted);max-width:500px;margin:0 auto 20px">Estamos documentando y fotografiando nuevos lugares en toda Guatemala. ¿Conoces algún lugar que debería estar aquí?</p>
+      <a href="contacto.html" class="btn btn--primary">
+        <i class="fa fa-map-marker-alt"></i> Proponer una ubicación
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORAR POR DEPARTAMENTO -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">Por región</p>
+      <h2 class="section-title" style="color:white">Explora por departamento</h2>
+    </div>
+    <div class="departments-grid" id="depts-grid-explorar"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🗺️</div>
+          <span class="logo-text">Guatemala <span>360</span></span>
+        </a>
+        <p>Plataforma digital para explorar el patrimonio cultural e histórico de Guatemala mediante recorridos virtuales 360°.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explorar</div>
+        <ul class="footer-links">
+          <li><a href="explorar.html">Todas las ubicaciones</a></li>
+          <li><a href="tour.html">Recorrido demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Información</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Guatemala 360</div>
+        <ul class="footer-links">
+          <li><a href="contacto.html">Alianzas</a></li>
+          <li><a href="contacto.html">Prensa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Guatemala 360. Contenido sujeto a validación histórica.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title"></h3>
+      <button class="modal-close" id="modal-close">✕</button>
+    </div>
+    <div class="modal-img-placeholder" id="modal-image"></div>
+    <div class="modal-body">
+      <p class="modal-text" id="modal-text"></p>
+      <p class="modal-source" id="modal-source"></p>
+    </div>
+  </div>
+</div>
+
+<!-- CHATBOT WIDGET -->
+<div class="chatbot-widget">
+  <div class="chatbot-panel">
+    <button class="chatbot-panel-close">✕</button>
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name">Guía360</div>
+        <div class="chat-status">Asistente virtual</div>
+      </div>
+    </div>
+    <div class="chat-messages"></div>
+    <div class="chat-input-area">
+      <input class="chat-input" type="text" placeholder="Pregunta sobre Guatemala...">
+      <button class="chat-send">➤</button>
+    </div>
+  </div>
+  <button class="chatbot-toggle">💬</button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Render departments
+    const dg = document.getElementById('depts-grid-explorar');
+    if (dg) {
+      G360_DATA.departamentos.forEach(d => {
+        dg.innerHTML += `
+          <div class="dept-card" onclick="document.getElementById('filter-depto').value='${d.nombre.toLowerCase()}';document.getElementById('filter-depto').dispatchEvent(new Event('change'))">
+            <div style="font-size:1.4rem;margin-bottom:6px">${d.emoji}</div>
+            <div class="dept-name">${d.nombre}</div>
+            <div class="dept-count">${d.count > 0 ? d.count + ' lugar(es)' : 'Próximamente'}</div>
+          </div>
+        `;
+      });
+    }
+  });
+</script>
+</body>
+</html>
