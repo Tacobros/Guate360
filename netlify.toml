@@ -10,6 +10,7 @@
   to = "/index.html"
   status = 200
 
+# Seguridad — aplica a todo
 [[headers]]
   for = "/*"
   [headers.values]
@@ -17,14 +18,27 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=3600"
 
+# HTML — nunca cachear, siempre pedir versión fresca
 [[headers]]
-  for = "/css/*"
+  for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "no-cache, no-store, must-revalidate"
 
+# JS — siempre verificar con el servidor
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "no-cache, must-revalidate"
+
+# CSS — siempre verificar con el servidor
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
+
+# Imágenes — cachear bastante (cambian poco)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
