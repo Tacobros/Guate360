@@ -31,7 +31,7 @@ const I18N = {
     stat1_label: "Ubicaciones registradas",
     stat2_label: "Escenas en recorrido piloto",
     stat3_label: "Hotspots informativos",
-    stat4_label: "Asistente IA educativo",
+    stat4_label: "Patrimonio verificado",
 
     // VALUE SECTION
     value_label: "¿Por qué Guatemala 360?",
@@ -60,8 +60,8 @@ const I18N = {
     step2_desc: "Ingresa al visor 360° del lugar seleccionado. Compatible con celular, tablet y computadora.",
     step3_title: "Explora los hotspots",
     step3_desc: "Toca los puntos informativos para conocer la historia, datos arquitectónicos y curiosidades.",
-    step4_title: "Pregúntale al guía IA",
-    step4_desc: "Usa el chatbot Guía360 para hacer preguntas sobre el lugar con información verificada.",
+    step4_title: "Planifica tu visita",
+    step4_desc: "Consulta horarios, cómo llegar con Google Maps o Waze, y comparte el lugar con quien quieras.",
     how_cta: "Probar ahora — Catedral Metropolitana",
 
     // LOCATIONS
@@ -78,16 +78,6 @@ const I18N = {
     dept_label: "Guatemala",
     dept_title: "Explora por departamento",
     dept_subtitle: "22 departamentos, incontables historias por descubrir",
-
-    // CHATBOT SECTION
-    chat_label: "Asistente IA",
-    chat_title: "Conoce a Guía360",
-    chat_subtitle: "Tu guía virtual educativa del patrimonio guatemalteco. Pregúntale lo que quieras sobre los lugares de la plataforma.",
-    chat_feat1: "Responde solo con información verificada de la base de conocimiento",
-    chat_feat2: "Sugiere lugares relacionados y rutas para visitar",
-    chat_feat3: "Explica contexto histórico, arquitectónico y cultural",
-    chat_feat4: "Indica claramente cuando no tiene información disponible",
-    chat_cta: "Hablar con Guía360",
 
     // CTA FINAL
     final_label: "¿Listo para explorar?",
@@ -145,7 +135,6 @@ const I18N = {
     tour_legend_label: "Leyenda",
     tour_legend_info: "Punto de información",
     tour_legend_nav: "Cambiar de escena",
-    tour_chatbot_label: "Guía360 — Asistente IA",
     tour_full_card: "Ficha histórica completa",
     tour_start: "Iniciar Recorrido 360°",
     tour_related: "Ubicaciones relacionadas",
@@ -191,14 +180,6 @@ const I18N = {
     contact_submit: "Enviar mensaje",
     contact_success_title: "¡Mensaje enviado!",
     contact_success_msg: "Gracias por contactarnos. Responderemos a tu correo en un plazo de 2 días hábiles.",
-
-    // CHATBOT RESPONSES
-    chat_greeting: "¡Hola! Soy Guía360, tu asistente virtual del patrimonio guatemalteco 🇬🇹 ¿Qué quieres saber sobre nuestros lugares?",
-    chat_input_placeholder: "Escribe tu pregunta...",
-    chat_chip_history: "Historia",
-    chat_chip_hours: "Horarios",
-    chat_chip_similar: "Lugares similares",
-    chat_chip_curiosities: "Curiosidades",
 
     // NAVIGATION EXTRAS
     nav_weddings: "Bodas & Eventos",
@@ -268,7 +249,7 @@ const I18N = {
     stat1_label: "Registered locations",
     stat2_label: "Scenes in pilot tour",
     stat3_label: "Informational hotspots",
-    stat4_label: "AI educational assistant",
+    stat4_label: "Verified heritage",
 
     value_label: "Why Guatemala 360?",
     value_title: "A platform for everyone",
@@ -295,8 +276,8 @@ const I18N = {
     step2_desc: "Enter the 360° viewer for your selected location. Compatible with phone, tablet, and desktop.",
     step3_title: "Explore hotspots",
     step3_desc: "Click on informational points to learn about history, architecture, and curiosities.",
-    step4_title: "Ask the AI guide",
-    step4_desc: "Use the Guía360 chatbot to ask questions about the location with verified information.",
+    step4_title: "Plan your visit",
+    step4_desc: "Check hours, get directions with Google Maps or Waze, and share the place with anyone.",
     how_cta: "Try it now — Metropolitan Cathedral",
 
     locations_label: "Destinations",
@@ -311,14 +292,6 @@ const I18N = {
     dept_title: "Explore by department",
     dept_subtitle: "22 departments, countless stories to discover",
 
-    chat_label: "AI Assistant",
-    chat_title: "Meet Guía360",
-    chat_subtitle: "Your virtual educational guide to Guatemala's heritage. Ask anything about the platform's locations.",
-    chat_feat1: "Only responds with verified information from the knowledge base",
-    chat_feat2: "Suggests related places and routes to visit",
-    chat_feat3: "Explains historical, architectural, and cultural context",
-    chat_feat4: "Clearly indicates when information is not available",
-    chat_cta: "Talk to Guía360",
 
     final_label: "Ready to explore?",
     final_title: "Guatemala is waiting. From the comfort of your home.",
@@ -371,7 +344,6 @@ const I18N = {
     tour_legend_label: "Legend",
     tour_legend_info: "Information point",
     tour_legend_nav: "Change scene",
-    tour_chatbot_label: "Guía360 — AI Assistant",
     tour_full_card: "Full historical profile",
     tour_start: "Start 360° Tour",
     tour_related: "Related locations",
@@ -415,12 +387,6 @@ const I18N = {
     contact_success_title: "Message sent!",
     contact_success_msg: "Thank you for contacting us. We will reply to your email within 2 business days.",
 
-    chat_greeting: "Hello! I'm Guía360, your virtual guide to Guatemala's cultural heritage 🇬🇹 What would you like to know about our locations?",
-    chat_input_placeholder: "Type your question...",
-    chat_chip_history: "History",
-    chat_chip_hours: "Hours",
-    chat_chip_similar: "Similar places",
-    chat_chip_curiosities: "Fun facts",
 
     nav_weddings: "Weddings & Events",
     nav_recommendations: "Recommendations",
@@ -479,7 +445,7 @@ const I18N = {
     stat1_label: "Lieux enregistrés",
     stat2_label: "Scènes dans la visite pilote",
     stat3_label: "Points informatifs",
-    stat4_label: "Assistant IA éducatif",
+    stat4_label: "Patrimoine vérifié",
 
     value_label: "Pourquoi Guatemala 360 ?",
     value_title: "Une plateforme pour tous",
@@ -506,8 +472,8 @@ const I18N = {
     step2_desc: "Accédez au visualiseur 360° du lieu sélectionné. Compatible avec smartphone, tablette et ordinateur.",
     step3_title: "Explorez les points",
     step3_desc: "Cliquez sur les points informatifs pour découvrir l'histoire, l'architecture et les curiosités du lieu.",
-    step4_title: "Posez des questions",
-    step4_desc: "Utilisez le chatbot Guía360 pour poser des questions sur le lieu avec des informations vérifiées.",
+    step4_title: "Planifiez votre visite",
+    step4_desc: "Consultez les horaires, obtenez un itinéraire avec Google Maps ou Waze, et partagez le lieu.",
     how_cta: "Essayer maintenant — Cathédrale Métropolitaine",
 
     locations_label: "Destinations",
@@ -522,14 +488,6 @@ const I18N = {
     dept_title: "Explorer par département",
     dept_subtitle: "22 départements, d'innombrables histoires à découvrir",
 
-    chat_label: "Assistant IA",
-    chat_title: "Rencontrez Guía360",
-    chat_subtitle: "Votre guide virtuel éducatif du patrimoine guatémaltèque. Posez toutes vos questions sur les lieux de la plateforme.",
-    chat_feat1: "Répond uniquement avec des informations vérifiées de la base de connaissances",
-    chat_feat2: "Suggère des lieux similaires et des itinéraires à visiter",
-    chat_feat3: "Explique le contexte historique, architectural et culturel",
-    chat_feat4: "Indique clairement quand des informations ne sont pas disponibles",
-    chat_cta: "Parler à Guía360",
 
     final_label: "Prêt à explorer ?",
     final_title: "Le Guatemala vous attend. Sans quitter la maison.",
@@ -582,7 +540,6 @@ const I18N = {
     tour_legend_label: "Légende",
     tour_legend_info: "Point d'information",
     tour_legend_nav: "Changer de scène",
-    tour_chatbot_label: "Guía360 — Assistant IA",
     tour_full_card: "Fiche historique complète",
     tour_start: "Commencer la visite 360°",
     tour_related: "Lieux similaires",
@@ -626,12 +583,6 @@ const I18N = {
     contact_success_title: "Message envoyé !",
     contact_success_msg: "Merci de nous avoir contactés. Nous répondrons à votre e-mail dans un délai de 2 jours ouvrables.",
 
-    chat_greeting: "Bonjour ! Je suis Guía360, votre guide virtuel du patrimoine guatémaltèque 🇬🇹 Que voulez-vous savoir sur nos lieux ?",
-    chat_input_placeholder: "Tapez votre question...",
-    chat_chip_history: "Histoire",
-    chat_chip_hours: "Horaires",
-    chat_chip_similar: "Lieux similaires",
-    chat_chip_curiosities: "Curiosités",
 
     nav_weddings: "Mariages & Événements",
     nav_recommendations: "Recommandations",
@@ -695,7 +646,7 @@ const I18N = {
     stat1_label: "已记录地点",
     stat2_label: "360°场景",
     stat3_label: "信息热点",
-    stat4_label: "AI教育助手",
+    stat4_label: "已验证遗产",
 
     // VALUE
     value_label: "为什么选择危地马拉360？",
@@ -724,8 +675,8 @@ const I18N = {
     step2_desc: "进入所选地点的360°查看器。兼容手机、平板和电脑。",
     step3_title: "探索热点",
     step3_desc: "点击信息点了解历史、建筑和趣闻。",
-    step4_title: "提问",
-    step4_desc: "使用Guía360聊天机器人，通过已验证信息提问。",
+    step4_title: "规划您的参观",
+    step4_desc: "查看开放时间，通过Google Maps或Waze获取路线，并与任何人分享该地点。",
     how_cta: "立即体验 — 大都会大教堂",
 
     // LOCATIONS

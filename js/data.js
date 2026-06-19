@@ -376,8 +376,8 @@ const G360_DATA = {
           a: "Los lugares se seleccionan considerando su valor histórico, cultural, patrimonial o turístico. Priorizamos sitios con declaratoria de patrimonio, relevancia educativa, representatividad de diferentes departamentos y disponibilidad de acceso para fotografía 360."
         },
         {
-          q: "¿Qué es el chatbot guía?",
-          a: "Guía360 es nuestro asistente virtual educativo. Puedes preguntarle sobre la historia de los lugares, datos relevantes, y rutas o destinos relacionados. Responde únicamente con información verificada y te indica cuando no tiene datos disponibles."
+          q: "¿Cómo puedo llegar a los lugares?",
+          a: "Cada ubicación incluye botones de navegación directa con Google Maps y Waze. También puedes compartir la ubicación por WhatsApp, Facebook o generar un código QR para compartirlo fácilmente."
         }
       ]
     },
