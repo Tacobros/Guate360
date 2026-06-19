@@ -73,6 +73,8 @@
       <nav class="nav">
         <a href="index.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_home">Inicio</a>
         <a href="explorar.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_explore">Explorar</a>
+        <a href="bodas.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_weddings">Bodas &amp; Eventos</a>
+        <a href="recomendaciones.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_recommendations">Recomendaciones</a>
         <a href="tour.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_tour">Recorrido Demo</a>
         <a href="faq.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_faq">FAQ</a>
         <a href="contacto.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_contact">Contacto</a>
@@ -91,6 +93,8 @@
   <nav class="mobile-nav">
     <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
     <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+    <a href="bodas.html" class="nav-link" data-i18n="nav_weddings">Bodas &amp; Eventos</a>
+    <a href="recomendaciones.html" class="nav-link" data-i18n="nav_recommendations">Recomendaciones</a>
     <a href="tour.html" class="nav-link" data-i18n="nav_tour_360">Ver 360°</a>
     <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
     <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
@@ -179,6 +183,25 @@
           <div class="curiosidad-card">
             <span class="curiosidad-icon">🔔</span>
             <p class="curiosidad-text">Sus campanas originales fueron fundidas con una mezcla especial de plata y bronce para mejorar su resonancia y tonalidad. [Dato simulado — demo]</p>
+          </div>
+        </div>
+
+        <!-- RECOMENDACIONES CERCANAS -->
+        <div class="ficha-section">
+          <h2 class="ficha-section-title">🏨 <span data-i18n="loc_nearby_title">Cerca de aquí</span></h2>
+          <p style="font-size:0.875rem;color:var(--color-muted);margin-bottom:0" data-i18n="loc_nearby_subtitle">Establecimientos recomendados por Guatemala 360</p>
+          <div class="nearby-tabs">
+            <button class="nearby-tab active" data-cat="hotel" data-i18n="loc_nearby_hotels">🏨 Hoteles</button>
+            <button class="nearby-tab" data-cat="restaurant" data-i18n="loc_nearby_restaurants">🍽️ Restaurantes</button>
+            <button class="nearby-tab" data-cat="venue" data-i18n="loc_nearby_venues">🎪 Venues</button>
+          </div>
+          <div class="nearby-grid" id="nearby-grid">
+            <!-- rendered by JS below -->
+          </div>
+          <div class="nearby-cta-row">
+            <a href="recomendaciones.html" class="btn btn--ghost btn--sm">
+              <i class="fa fa-map-marked-alt"></i> <span data-i18n="loc_nearby_cta">Ver todas las recomendaciones</span>
+            </a>
           </div>
         </div>
 
@@ -294,19 +317,22 @@
           </div>
         </div>
 
-        <!-- Mapa (placeholder) -->
+        <!-- Mapa / Navegación -->
         <div class="ficha-card">
           <div class="ficha-card-title">
             <i class="fa fa-map-marker-alt" style="color:var(--color-secondary)"></i>
-            Ubicación
+            <span data-i18n="loc_get_directions">Cómo llegar</span>
           </div>
-          <div style="width:100%;height:160px;background:linear-gradient(135deg,#1B4D3E,#2A6E57);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,0.7);font-size:0.8rem;margin-bottom:12px">
-            <span style="font-size:2rem">🗺️</span>
-            <span>Mapa interactivo</span>
-            <span style="font-size:0.7rem;opacity:0.6">Próximamente</span>
+          <p style="font-size:0.82rem;color:var(--color-mid);margin-bottom:4px">📍 Plaza de la Constitución, Zona 1, Ciudad de Guatemala</p>
+          <p style="font-size:0.75rem;color:var(--color-muted);margin-bottom:12px">14.6349° N, 90.5134° O</p>
+          <div class="nav-btns">
+            <a href="https://www.google.com/maps/search/?api=1&query=14.6349,-90.5134" target="_blank" rel="noopener" class="btn-nav btn-nav--gmaps">
+              <i class="fab fa-google"></i> <span data-i18n="loc_gmaps">Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?ll=14.6349,-90.5134&navigate=yes" target="_blank" rel="noopener" class="btn-nav btn-nav--waze">
+              🚗 <span data-i18n="loc_waze">Waze</span>
+            </a>
           </div>
-          <p style="font-size:0.8rem;color:var(--color-mid)">📍 Plaza de la Constitución, Zona 1, Ciudad de Guatemala</p>
-          <p style="font-size:0.75rem;color:var(--color-muted);margin-top:4px">Coordenadas: 14.6349° N, 90.5134° O</p>
         </div>
 
         <!-- Horarios -->
@@ -336,13 +362,26 @@
         <div class="ficha-card">
           <div class="ficha-card-title">
             <i class="fa fa-share-alt" style="color:var(--color-secondary)"></i>
-            Compartir
+            <span data-i18n="loc_share_title">Compartir</span>
           </div>
-          <div style="display:flex;gap:8px">
-            <a href="#" class="social-link" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link" aria-label="Compartir en Twitter/X"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" class="social-link" aria-label="Copiar enlace"><i class="fa fa-link"></i></a>
+          <div class="share-grid">
+            <a href="https://wa.me/?text=Explora%20la%20Catedral%20Metropolitana%20de%20Guatemala%20en%20360%C2%B0%20%F0%9F%8F%9B%EF%B8%8F%20https%3A%2F%2Fguatemala360-demo.netlify.app%2Fubicacion.html" target="_blank" rel="noopener" class="share-btn share-btn--wa">
+              <i class="fab fa-whatsapp"></i> <span data-i18n="loc_share_wa">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fguatemala360-demo.netlify.app%2Fubicacion.html" target="_blank" rel="noopener" class="share-btn share-btn--fb">
+              <i class="fab fa-facebook-f"></i> <span data-i18n="loc_share_fb">Facebook</span>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fguatemala360-demo.netlify.app%2Fubicacion.html&text=Visita%20la%20Catedral%20Metropolitana%20de%20Guatemala%20en%20recorrido%20virtual%20360%C2%B0%20%F0%9F%8F%9B%EF%B8%8F" target="_blank" rel="noopener" class="share-btn share-btn--tw">
+              <i class="fab fa-twitter"></i> <span data-i18n="loc_share_tw">Twitter</span>
+            </a>
+            <button onclick="copyPageLink(this)" class="share-btn share-btn--link">
+              <i class="fa fa-link"></i> <span data-i18n="loc_copy_link">Copiar enlace</span>
+            </button>
+          </div>
+          <div class="share-qr-wrap">
+            <div class="share-qr-label" data-i18n="loc_qr_label">Código QR</div>
+            <img class="share-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https%3A%2F%2Fguatemala360-demo.netlify.app%2Fubicacion.html&color=1B4D3E" width="120" height="120" alt="QR Code" loading="lazy">
+            <div class="share-qr-sub" data-i18n="loc_qr_scan">Escanea para compartir</div>
           </div>
         </div>
 
@@ -467,5 +506,71 @@
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+<script>
+  // Nearby recommendations data
+  const NEARBY = {
+    hotel: [
+      { icon:'🏨', name:'Hotel Biltmore Guatemala', dist:'8 min', desc:'Hotel de lujo en Zona 10 con spa, piscina y restaurante de alta cocina.', badge:'★★★★★', partner:true },
+      { icon:'🏨', name:'Westin Camino Real', dist:'12 min', desc:'Referente hotelero de Guatemala, a pasos del centro financiero y cultural.', badge:'★★★★★', partner:true },
+      { icon:'🏨', name:'Hotel Posada Belén', dist:'5 min', desc:'Encantador hotel boutique en el Centro Histórico, ambiente colonial.', badge:'★★★★', partner:false },
+      { icon:'🏨', name:'Barceló Guatemala City', dist:'15 min', desc:'Hotel contemporáneo con vistas panorámicas a la ciudad.', badge:'★★★★★', partner:true },
+    ],
+    restaurant: [
+      { icon:'🍽️', name:'Restaurante Kacao', dist:'10 min', desc:'Gastronomía guatemalteca de autor. Ingredientes locales, sabores únicos.', badge:'Guatemalteca', partner:true },
+      { icon:'☕', name:'Café de la Paz', dist:'3 min', desc:'Café artesanal a pasos de la Plaza de la Constitución. Desayunos típicos.', badge:'Café & Bistró', partner:false },
+      { icon:'🍷', name:'Tamarindos', dist:'14 min', desc:'Cocina fusión con vista a la ciudad. Ideal para cenas de negocios.', badge:'Fusión', partner:true },
+      { icon:'🌮', name:'Pecados Centro', dist:'7 min', desc:'Comida gourmet informal en ambiente relajado, amplia carta de bebidas.', badge:'Gourmet', partner:false },
+    ],
+    venue: [
+      { icon:'🎪', name:'Centro Cultural Miguel Ángel Asturias', dist:'5 min', desc:'Teatro nacional de Guatemala. Eventos culturales, bodas y galas privadas.', badge:'Eventos & Arte', partner:true },
+      { icon:'🏛️', name:'Palacio Nacional de la Cultura', dist:'1 min', desc:'Icónico palacio histórico disponible para eventos institucionales y corporativos.', badge:'Corporativo', partner:true },
+      { icon:'🌿', name:'Club Guatemala', dist:'18 min', desc:'Salones y jardines privados para bodas, quinceañeras y eventos sociales.', badge:'Social & Bodas', partner:false },
+      { icon:'🎭', name:'Teatro de Cámara', dist:'5 min', desc:'Espacio íntimo para presentaciones, lanzamientos y eventos culturales.', badge:'Cultural', partner:true },
+    ],
+  };
+
+  let currentCat = 'hotel';
+
+  function renderNearby(cat) {
+    const grid = document.getElementById('nearby-grid');
+    if (!grid) return;
+    grid.innerHTML = NEARBY[cat].map(p => `
+      <div class="nearby-card">
+        ${p.partner ? '<span class="nearby-partner-badge">SOCIO</span>' : ''}
+        <div class="nearby-card-icon">${p.icon}</div>
+        <div class="nearby-card-name">${p.name}</div>
+        <div class="nearby-card-dist">📍 ${p.dist} a pie · <span class="nearby-card-badge">${p.badge}</span></div>
+        <div class="nearby-card-desc">${p.desc}</div>
+        <a href="recomendaciones.html" class="btn btn--ghost btn--sm" style="font-size:0.75rem;padding:5px 12px">Ver más</a>
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderNearby('hotel');
+    document.querySelectorAll('.nearby-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.nearby-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderNearby(tab.dataset.cat);
+      });
+    });
+  });
+
+  function copyPageLink(btn) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const span = btn.querySelector('span');
+      const original = span.textContent;
+      span.textContent = '¡Copiado!';
+      btn.style.background = '#1B4D3E';
+      btn.style.color = 'white';
+      setTimeout(() => {
+        span.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2000);
+    });
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendaciones & Partners — Guatemala 360</title>
+  <meta name="description" content="Hoteles, restaurantes, venues y experiencias recomendadas para enriquecer tu visita al patrimonio cultural de Guatemala.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header header--light" id="main-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🗺️</div>
+        <span class="logo-text" style="color:var(--color-primary)">Guatemala <span>360</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_home">Inicio</a>
+        <a href="explorar.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_explore">Explorar</a>
+        <a href="bodas.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_weddings">Bodas & Eventos</a>
+        <a href="recomendaciones.html" class="nav-link active" style="color:var(--color-primary)" data-i18n="nav_recommendations">Recomendaciones</a>
+        <a href="tour.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_tour">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_faq">FAQ</a>
+        <a href="contacto.html" class="nav-link" style="color:var(--color-dark)" data-i18n="nav_contact">Contacto</a>
+        <div class="lang-switcher"></div>
+        <a href="contacto.html" class="btn btn--primary btn--sm nav-cta">
+          <i class="fa fa-handshake"></i> <span data-i18n="recs_join_cta">Alianza</span>
+        </a>
+      </nav>
+      <button class="hamburger">
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+        <span style="background:var(--color-dark)"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+    <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+    <a href="bodas.html" class="nav-link" data-i18n="nav_weddings">Bodas & Eventos</a>
+    <a href="recomendaciones.html" class="nav-link" data-i18n="nav_recommendations">Recomendaciones</a>
+    <a href="tour.html" class="nav-link" data-i18n="nav_tour">Recorrido Demo</a>
+    <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
+    <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    <div class="lang-switcher" style="justify-content:flex-start;margin:8px 0"></div>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="ficha-breadcrumb" style="justify-content:center">
+      <a href="index.html">Inicio</a>
+      <span class="separator">›</span>
+      <span style="color:rgba(255,255,255,0.7)" data-i18n="nav_recommendations">Recomendaciones</span>
+    </nav>
+    <p class="section-label" data-i18n="recs_label">Alianzas</p>
+    <h1 class="section-title" style="color:white" data-i18n="recs_title">Recomendaciones & Partners</h1>
+    <p class="section-subtitle" style="margin:0 auto" data-i18n="recs_subtitle">Hoteles, restaurantes, venues y experiencias seleccionados para enriquecer tu visita a Guatemala</p>
+  </div>
+</div>
+
+<!-- FILTROS DE CATEGORÍA -->
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <div id="filter-cat-bar" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;border-bottom:2px solid var(--color-border);padding-bottom:0">
+      <button class="filter-cat-btn active" data-cat="all" onclick="filterPartners('all',this)">🌐 Todos</button>
+      <button class="filter-cat-btn" data-cat="hotel" onclick="filterPartners('hotel',this)">🏨 Hoteles</button>
+      <button class="filter-cat-btn" data-cat="restaurant" onclick="filterPartners('restaurant',this)">🍽️ Restaurantes</button>
+      <button class="filter-cat-btn" data-cat="venue" onclick="filterPartners('venue',this)">🎪 Venues</button>
+      <button class="filter-cat-btn" data-cat="experience" onclick="filterPartners('experience',this)">🎭 Experiencias</button>
+    </div>
+    <style>
+      .filter-cat-btn {
+        padding: 10px 20px; border-radius: 0; border: none; background: transparent;
+        font-size: 0.85rem; font-weight: 600; color: var(--color-muted);
+        cursor: pointer; transition: var(--transition); border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+      }
+      .filter-cat-btn:hover { color: var(--color-primary); }
+      .filter-cat-btn.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+    </style>
+  </div>
+</section>
+
+<!-- GRID DE PARTNERS -->
+<section class="section" style="padding-top:32px">
+  <div class="container">
+    <div class="partners-grid" id="partners-grid">
+      <!-- rendered by JS -->
+    </div>
+
+    <!-- CTA UNIRSE -->
+    <div style="margin-top:64px;padding:48px 32px;background:var(--color-dark);border-radius:var(--radius-lg);text-align:center;color:white">
+      <div style="font-size:2.5rem;margin-bottom:16px">🤝</div>
+      <p class="section-label" data-i18n="recs_label">Alianzas</p>
+      <h2 style="font-family:var(--font-heading);font-size:1.8rem;color:white;margin-bottom:12px" data-i18n="recs_join_title">¿Quieres aparecer aquí?</h2>
+      <p style="color:rgba(255,255,255,0.65);max-width:540px;margin:0 auto 24px;line-height:1.7">Conectamos tu negocio con turistas nacionales e internacionales que visitan el patrimonio cultural de Guatemala. Aumenta tu visibilidad y recibe clientes calificados.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:rgba(255,255,255,0.7)"><span style="color:var(--color-secondary);font-weight:900">✓</span> Perfil verificado</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:rgba(255,255,255,0.7)"><span style="color:var(--color-secondary);font-weight:900">✓</span> Visibilidad digital</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:rgba(255,255,255,0.7)"><span style="color:var(--color-secondary);font-weight:900">✓</span> Clientes calificados</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:rgba(255,255,255,0.7)"><span style="color:var(--color-secondary);font-weight:900">✓</span> Integración con 360°</div>
+      </div>
+      <a href="contacto.html" class="btn btn--primary">
+        <i class="fa fa-handshake"></i> <span data-i18n="recs_join_cta">Contactar para alianza</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🗺️</div>
+          <span class="logo-text">Guatemala <span>360</span></span>
+        </a>
+        <p>Plataforma digital para explorar el patrimonio cultural e histórico de Guatemala mediante recorridos virtuales 360°.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explorar</div>
+        <ul class="footer-links">
+          <li><a href="explorar.html">Todas las ubicaciones</a></li>
+          <li><a href="tour.html">Recorrido demo</a></li>
+          <li><a href="bodas.html">Bodas & Eventos</a></li>
+          <li><a href="recomendaciones.html">Recomendaciones</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Información</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Guatemala 360</div>
+        <ul class="footer-links">
+          <li><a href="contacto.html">Alianzas</a></li>
+          <li><a href="contacto.html">Prensa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Guatemala 360. Contenido sujeto a validación histórica.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const PARTNERS = [
+    { cat:'hotel', icon:'🏨', name:'Barceló Guatemala City', location:'Guatemala Ciudad · Zona 10', stars:'★★★★★', desc:'Hotel contemporáneo con vistas panorámicas, gimnasio, spa y restaurante internacional. A 5 minutos de la Catedral Metropolitana.', badge:'Hotel de lujo', partner:true },
+    { cat:'hotel', icon:'🏨', name:'Casa Santo Domingo', location:'Antigua Guatemala · Sacatepéquez', stars:'★★★★★', desc:'Dentro de un convento colonial del siglo XVII. Museos, jardines, piscinas y restaurante de alta cocina en un entorno histórico incomparable.', badge:'Hotel boutique', partner:true },
+    { cat:'hotel', icon:'🏨', name:'Camino Real Guatemala', location:'Guatemala Ciudad · Zona 10', stars:'★★★★★', desc:'Referente hotelero de Guatemala. A pasos del Parque Cayalá, con salones de eventos, spa y gastronomía internacional.', badge:'Hotel de lujo', partner:false },
+    { cat:'hotel', icon:'🏨', name:'Hotel Atitlán', location:'Sololá · Lago Atitlán', stars:'★★★★', desc:'Jardines botánicos y bungalows frente al Lago Atitlán con vista a tres volcanes. Perfecto para bodas y retiros.', badge:'Resort & Spa', partner:true },
+    { cat:'restaurant', icon:'🍽️', name:'Restaurante Kacao', location:'Guatemala Ciudad · Zona 10', stars:'', desc:'Gastronomía guatemalteca de autor con ingredientes locales. Elegante, perfecto para cenas de negocios y celebraciones.', badge:'Guatemalteca', partner:true },
+    { cat:'restaurant', icon:'☕', name:'Café de la Merced', location:'Antigua Guatemala · Parque Central', stars:'', desc:'Café artesanal en ambiente colonial. Desayunos típicos, pasteles y cafés de origen guatemalteco. Punto de encuentro para turistas.', badge:'Café & Bistró', partner:false },
+    { cat:'restaurant', icon:'🍷', name:'Tamarindos', location:'Guatemala Ciudad · Zona 14', stars:'', desc:'Cocina fusión con vista a la ciudad. Carta extensa de vinos y cócteles artesanales. Ideal para cenas de negocios.', badge:'Fusión', partner:true },
+    { cat:'restaurant', icon:'🌮', name:'Pecados Panajachel', location:'Panajachel · Lago Atitlán', stars:'', desc:'Gastronomía de autor con vista al lago. Pescados frescos, tapas y bebidas artesanales en ambiente relajado.', badge:'Gourmet', partner:false },
+    { cat:'venue', icon:'🎪', name:'Centro Cultural Miguel Ángel Asturias', location:'Guatemala Ciudad · Zona 1', stars:'', desc:'Teatro nacional. Salones de gala, auditorio y espacios únicos para eventos culturales, bodas y ceremonias empresariales de alto nivel.', badge:'Eventos & Arte', partner:true },
+    { cat:'venue', icon:'🌿', name:'Quinta Real Los Aposentos', location:'Chimaltenango · Los Aposentos', stars:'', desc:'Extensa hacienda con jardines, lago privado y salones de eventos. Para bodas, quinceañeras y eventos corporativos con capacidad 800+.', badge:'Bodas & Social', partner:true },
+    { cat:'venue', icon:'🏛️', name:'Casa Muxbal', location:'Guatemala Ciudad · Km. 14.5', stars:'', desc:'Villa histórica con jardines europeos, capilla y salones de lujo. El venue más exclusivo de Guatemala para eventos privados.', badge:'Exclusivo', partner:false },
+    { cat:'experience', icon:'🎭', name:'Inguat — Rutas Culturales', location:'Nacional · 22 departamentos', stars:'', desc:'Rutas turísticas oficiales por Guatemala. Guías certificados, transporte y experiencias culturales auténticas en español, inglés y francés.', badge:'Turismo oficial', partner:true },
+    { cat:'experience', icon:'🧗', name:'Old Town Outfitters', location:'Antigua Guatemala', stars:'', desc:'Aventura extrema y ecoturismo. Senderismo en volcanes, kayak y tirolesa. Ideal para grupos de bodas o viajes corporativos.', badge:'Aventura', partner:false },
+    { cat:'experience', icon:'☕', name:'Tour de Café en finca', location:'Huehuetenango · Alta Verapaz', stars:'', desc:'Visitas a fincas cafetaleras de especialidad. Cosecha, proceso y cata guiada. Guatemala produce uno de los mejores cafés del mundo.', badge:'Agro-turismo', partner:true },
+    { cat:'experience', icon:'🎨', name:'Museo Ixchel del Traje Indígena', location:'Guatemala Ciudad · Zona 10', stars:'', desc:'Colección de textiles indígenas de todo el país. Visitas guiadas, talleres de tejido y conexión con la cultura maya contemporánea.', badge:'Cultural', partner:true },
+    { cat:'experience', icon:'🚤', name:'Tour en lancha Lago Atitlán', location:'Sololá · Santiago Atitlán', stars:'', desc:'Recorridos en lancha por los pueblos del lago. Santa Catarina, San Juan La Laguna y San Pedro La Laguna. Experiencia imperdible.', badge:'Turismo lacustre', partner:false },
+  ];
+
+  let currentCat = 'all';
+
+  function filterPartners(cat, btn) {
+    currentCat = cat;
+    document.querySelectorAll('.filter-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderPartners();
+  }
+
+  function renderPartners() {
+    const filtered = currentCat === 'all' ? PARTNERS : PARTNERS.filter(p => p.cat === currentCat);
+    document.getElementById('partners-grid').innerHTML = filtered.map(p => `
+      <div class="partner-card">
+        <div class="partner-card-icon">${p.icon}</div>
+        ${p.stars ? `<div class="partner-card-stars">${p.stars}</div>` : ''}
+        <div class="partner-card-name">${p.name}</div>
+        <div class="partner-card-location">📍 ${p.location}</div>
+        <span class="partner-category-tag">${p.badge}</span>
+        <div class="partner-card-desc">${p.desc}</div>
+        ${p.partner ? '<div style="font-size:0.65rem;font-weight:800;color:var(--color-secondary);margin-bottom:10px;letter-spacing:0.04em">✦ SOCIO GUATEMALA 360</div>' : ''}
+        <a href="contacto.html" class="btn btn--ghost btn--sm" style="font-size:0.78rem;padding:6px 14px">Contactar</a>
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', renderPartners);
+</script>
+</body>
+</html>
