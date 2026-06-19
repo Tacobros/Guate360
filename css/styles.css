@@ -1143,6 +1143,148 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; }
 .modal-source { font-size: 0.75rem; color: var(--color-muted); border-top: 1px solid var(--color-border); padding-top: 12px; margin-top: 12px; }
 
 /* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: 8px;
+}
+.lang-btn {
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--color-secondary); color: var(--color-secondary); }
+.lang-btn.active { background: var(--color-secondary); color: var(--color-dark); border-color: var(--color-secondary); }
+.header--light .lang-btn { border-color: var(--color-border); color: var(--color-mid); }
+.header--light .lang-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.header--light .lang-btn.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+
+/* ============================================================
+   USER ACCOUNT (minimal login indicator)
+   ============================================================ */
+.user-menu {
+  position: relative;
+  margin-left: 8px;
+}
+.user-avatar-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(200,168,75,0.15);
+  border: 1.5px solid rgba(200,168,75,0.4);
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.user-avatar-btn:hover { background: rgba(200,168,75,0.3); }
+.user-dropdown {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  width: 200px;
+  background: var(--color-bg-dark);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  display: none;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+}
+.user-dropdown.open { display: block; }
+.user-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+.user-dropdown-item:hover { background: rgba(255,255,255,0.07); color: white; }
+.user-dropdown-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 6px 0; }
+
+/* Login modal */
+.login-modal-content { max-width: 400px; }
+.login-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--color-border);
+}
+.login-tab {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--transition);
+}
+.login-tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+.login-panel { display: none; }
+.login-panel.active { display: block; }
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.social-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--color-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+.social-login-btn:hover { border-color: var(--color-primary); background: rgba(27,77,62,0.04); }
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.or-divider::before, .or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {

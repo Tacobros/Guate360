@@ -1,8 +1,9 @@
 # GUATEMALA 360 — MASTER BRIEF
-**Versión:** 1.0.0  
+**Versión:** 1.1.0  
 **Fecha:** 2026-06-19  
-**Estado:** Borrador inicial — pendiente validación con cliente  
+**Estado:** Actualizado con respuestas del cliente — listo para propuesta  
 **Propietario:** Luis Cerezo / Equipo Guatemala 360  
+**DEADLINE PRESENTACIÓN: Lunes 22 de junio de 2026**
 
 ---
 
@@ -11,6 +12,29 @@
 | Versión | Fecha | Descripción | Autor |
 |---------|-------|-------------|-------|
 | 1.0.0 | 2026-06-19 | Creación inicial del Master Brief | Luis Cerezo |
+| 1.1.0 | 2026-06-19 | Actualización con respuestas del cliente: idiomas, hosting, métricas, login, administrador único | Luis Cerezo |
+
+---
+
+## ⚡ DECISIONES CONFIRMADAS POR EL CLIENTE (v1.1)
+
+| Pregunta | Respuesta confirmada |
+|----------|---------------------|
+| Ubicación piloto | Flexible — usar referencias públicas para demo |
+| Imágenes 360° | Existen algunas; se producirán más durante el año |
+| Presupuesto | Sin límite fijo — financiado por patrocinadores según costo del proyecto |
+| Idiomas | Español, Inglés y Francés (con miras a más idiomas) |
+| Dominio/Hosting | No existen aún — usar plataformas gratuitas para demo (Netlify) |
+| Contenido histórico | Partir de cero con investigación web; arqueólogo certificado a contratar |
+| Validación de contenido | Sí — la ONG contratará arqueólogo para información certera |
+| Permisos de acceso | Confirmados — la ONG gestionará los permisos necesarios |
+| Chatbot | Puede ser prescripted para la demo; funcional en producción |
+| Sistema de login | Agregar en la demo — sistema de usuarios con perfiles (turista, docente, investigador, institución) |
+| Donaciones/membresías | No — modelo 100% de patrocinadores |
+| Métricas | A definir para la ONG — incluidas en este documento |
+| Identidad de marca | En proceso — siendo trabajada el mismo día |
+| Admin WordPress | 1 persona (Luis Cerezo) |
+| Deadline | **Lunes 22 de junio de 2026** |
 
 ---
 
@@ -493,6 +517,66 @@ CIERRE → Invita a explorar el recorrido 360
 
 ---
 
+## 18B. FRAMEWORK DE MÉTRICAS DE IMPACTO PARA PATROCINADORES
+
+> Diseñado para que la ONG pueda demostrar valor a sus financiadores y justificar la renovación del patrocinio.
+
+### PATRIMONIO DOCUMENTADO
+| Métrica | Meta Año 1 |
+|---------|-----------|
+| Lugares documentados en 360° | 10 ubicaciones |
+| Escenas navegables producidas | 30+ escenas |
+| Fichas históricas publicadas | 10 con fuentes |
+| Fuentes bibliográficas citadas | 50+ fuentes |
+| Departamentos cubiertos | Mínimo 5 de 22 |
+
+### AUDIENCIA Y ALCANCE
+| Métrica | Meta Mes 3 | Meta Año 1 |
+|---------|-----------|-----------|
+| Visitantes únicos/mes | 500 | 5,000 |
+| Países de origen | 10 | 30 |
+| Idiomas del contenido | 3 (ES/EN/FR) | 5 |
+| Usuarios registrados | 50 | 500 |
+
+### ENGAGEMENT (PROFUNDIDAD DE USO)
+| Métrica | Meta |
+|---------|------|
+| Tiempo promedio en tour 360° | > 3 minutos |
+| Hotspots explorados por sesión | > 3 |
+| Tasa de rebote | < 45% |
+| Consultas al chatbot/mes | 100 al año 1 |
+
+### IMPACTO EDUCATIVO
+| Métrica | Meta |
+|---------|------|
+| % visitas desde instituciones | 20% del tráfico |
+| Alianzas educativas firmadas | 5 al año 1 |
+| Solicitudes de uso institucional | 10 al año 1 |
+
+### VALOR PARA PATROCINADORES
+| Métrica | Herramienta |
+|---------|------------|
+| Impresiones de marca (páginas vistas × posiciones) | GA4 |
+| Usuarios únicos alcanzados | GA4 |
+| Reach internacional (países) | GA4 Geo |
+| Cobertura de prensa generada | Manual |
+| Equivalencia publicitaria estimada | CPM × impresiones |
+
+### TEMPLATE REPORTE TRIMESTRAL PARA PATROCINADORES
+```
+INFORME DE IMPACTO — [Q1/Q2/Q3/Q4] 2026
+─────────────────────────────────────────
+PATRIMONIO: X lugares • X escenas • X fichas históricas
+AUDIENCIA: X visitantes únicos • X países • X% internacional
+ENGAGEMENT: X min promedio en tour • X hotspots/sesión
+EDUCACIÓN: X instituciones aliadas • X solicitudes
+PATROCINADOR: X impresiones de marca • Equivalencia $X USD
+PRÓXIMO TRIMESTRE: [Ubicaciones planificadas]
+─────────────────────────────────────────
+```
+
+---
+
 ## 19. KPIs POR ETAPA
 
 ### Piloto (Mes 1)
@@ -634,11 +718,46 @@ ANEXOS (portafolio, perfiles, referencias)
 
 | Decisión | Justificación | Fecha |
 |----------|--------------|-------|
-| WordPress como CMS | Escalable, cliente puede administrar, ecosistema robusto | 2026-06-19 |
+| WordPress como CMS | Escalable, 1 admin puede manejarlo, ecosistema robusto | 2026-06-19 |
 | Pannellum para piloto | Open source, sin costo, suficiente para demo | 2026-06-19 |
 | RAG para chatbot | Evita alucinaciones, controlable, escalable | 2026-06-19 |
 | ACF Pro para campos | Estándar de la industria para WordPress avanzado | 2026-06-19 |
-| Kadence Theme | Rendimiento, FSE, soporte activo | 2026-06-19 |
+| Kadence Theme | Rendimiento, FSE, soporte activo, 1 admin | 2026-06-19 |
+| **3 idiomas: ES/EN/FR** | Confirmado por cliente — usar WPML o Polylang | 2026-06-19 |
+| **Sistema de login** | Incluir desde el inicio — 5 tipos de usuario | 2026-06-19 |
+| **Netlify para demo** | Hosting gratuito, deploy desde GitHub, ideal para presentación | 2026-06-19 |
+| **Modelo patrocinadores** | Sin cobro a usuarios, sin donaciones — 100% patrocinado | 2026-06-19 |
+| **Chatbot prescripted en demo** | Suficiente para comunicar el concepto al cliente | 2026-06-19 |
+| **Arqueólogo certificado** | La ONG lo contratará para validar contenido histórico | 2026-06-19 |
+| **1 administrador WordPress** | Luis Cerezo — el sistema debe ser simple de administrar | 2026-06-19 |
+
+### SISTEMA DE USUARIOS (confirmado)
+```
+TIPOS DE USUARIO:
+├── Turista / Visitante     → Favoritos, historial de recorridos
+├── Estudiante              → Acceso a fichas educativas completas
+├── Docente                 → Recursos pedagógicos, materiales descargables
+├── Investigador            → Acceso a fuentes y bibliografía extendida
+└── Institución             → Panel de seguimiento de su ubicación
+
+TECNOLOGÍA:
+├── WordPress: plugin WooCommerce Memberships o Members
+├── Registro social: Google OAuth (plugin)
+└── Sin costo para usuarios — todos los perfiles son gratuitos
+```
+
+### ESTRATEGIA MULTIIDIOMA (confirmado: ES/EN/FR)
+```
+PLUGIN: Polylang (gratuito) o WPML (premium ~$99/año)
+PRIORIDAD DE TRADUCCIÓN:
+  1. Landing page y navegación (demo)
+  2. Fichas históricas (al publicar cada ubicación)
+  3. FAQ y contacto
+  4. Chatbot (respuestas en idioma del usuario)
+
+NOTA: El switcher de idioma ya está implementado en la demo HTML
+con traducciones completas ES/EN/FR para todos los textos de la interfaz.
+```
 
 ---
 

@@ -56,13 +56,30 @@
         <span class="logo-text">Guatemala <span>360</span></span>
       </a>
       <nav class="nav" aria-label="Navegación principal">
-        <a href="index.html" class="nav-link active">Inicio</a>
-        <a href="explorar.html" class="nav-link">Explorar</a>
-        <a href="tour.html" class="nav-link">Recorrido Demo</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">Inicio</a>
+        <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+        <a href="tour.html" class="nav-link" data-i18n="nav_tour">Recorrido Demo</a>
+        <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+        <div class="lang-switcher"></div>
+        <div class="user-menu">
+          <button class="user-avatar-btn" id="user-menu-btn" onclick="toggleUserMenu()" aria-label="Mi cuenta">👤</button>
+          <div class="user-dropdown" id="user-dropdown">
+            <div id="user-logged-out">
+              <button class="user-dropdown-item" onclick="openLoginModal()">🔑 Iniciar sesión</button>
+              <button class="user-dropdown-item" onclick="openLoginModal('register')">✨ Registrarse</button>
+            </div>
+            <div id="user-logged-in" style="display:none">
+              <div style="padding:10px 12px;font-size:0.8rem;color:rgba(255,255,255,0.5);border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:4px" id="user-display-name">Usuario</div>
+              <a href="#" class="user-dropdown-item">🗺️ Mis favoritos</a>
+              <a href="#" class="user-dropdown-item">⚙️ Mi perfil</a>
+              <div class="user-dropdown-divider"></div>
+              <button class="user-dropdown-item" onclick="logout()" style="color:#ff6b6b">🚪 Cerrar sesión</button>
+            </div>
+          </div>
+        </div>
         <a href="tour.html" class="btn btn--primary btn--sm nav-cta">
-          <i class="fa fa-play"></i> Iniciar Recorrido
+          <i class="fa fa-play"></i> <span data-i18n="nav_cta">Iniciar Recorrido</span>
         </a>
       </nav>
       <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
@@ -71,12 +88,13 @@
     </div>
   </div>
   <nav class="mobile-nav" aria-label="Menú móvil">
-    <a href="index.html" class="nav-link">Inicio</a>
-    <a href="explorar.html" class="nav-link">Explorar</a>
-    <a href="tour.html" class="nav-link">Recorrido Demo</a>
-    <a href="faq.html" class="nav-link">FAQ</a>
-    <a href="contacto.html" class="nav-link">Contacto</a>
-    <a href="tour.html" class="btn btn--primary btn--sm" style="margin-top:8px">Iniciar Recorrido</a>
+    <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+    <a href="explorar.html" class="nav-link" data-i18n="nav_explore">Explorar</a>
+    <a href="tour.html" class="nav-link" data-i18n="nav_tour">Recorrido Demo</a>
+    <a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a>
+    <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    <div class="lang-switcher" style="justify-content:flex-start;margin:8px 0"></div>
+    <a href="tour.html" class="btn btn--primary btn--sm" style="margin-top:8px" data-i18n="nav_cta">Iniciar Recorrido</a>
   </nav>
 </header>
 
@@ -87,40 +105,40 @@
     <div class="hero-content">
       <div class="hero-badge">
         <i class="fa fa-globe"></i>
-        Plataforma Cultural Digital de Guatemala
+        <span data-i18n="hero_badge">Plataforma Cultural Digital de Guatemala</span>
       </div>
       <h1 class="hero-title">
-        Descubre Guatemala<br>
-        <span class="highlight">desde cualquier lugar</span><br>
-        del mundo
+        <span data-i18n="hero_title_1">Descubre Guatemala</span><br>
+        <span class="highlight" data-i18n="hero_title_2">desde cualquier lugar</span><br>
+        <span data-i18n="hero_title_3">del mundo</span>
       </h1>
-      <p class="hero-description">
+      <p class="hero-description" data-i18n="hero_desc">
         Explora lugares turísticos, históricos y patrimoniales de Guatemala mediante recorridos virtuales 360° interactivos. Aprende, descubre y conecta con la riqueza cultural del país.
       </p>
       <div class="hero-actions">
         <a href="tour.html" class="btn btn--primary btn--lg">
-          <i class="fa fa-play-circle"></i> Iniciar Recorrido Demo
+          <i class="fa fa-play-circle"></i> <span data-i18n="hero_cta1">Iniciar Recorrido Demo</span>
         </a>
         <a href="explorar.html" class="btn btn--outline btn--lg">
-          <i class="fa fa-map-marker-alt"></i> Ver Ubicaciones
+          <i class="fa fa-map-marker-alt"></i> <span data-i18n="hero_cta2">Ver Ubicaciones</span>
         </a>
       </div>
       <div class="hero-stats">
         <div>
           <div class="hero-stat-number">22</div>
-          <div class="hero-stat-label">Departamentos de Guatemala</div>
+          <div class="hero-stat-label" data-i18n="hero_stat1_label">Departamentos de Guatemala</div>
         </div>
         <div>
           <div class="hero-stat-number">360°</div>
-          <div class="hero-stat-label">Experiencia inmersiva</div>
+          <div class="hero-stat-label" data-i18n="hero_stat2_label">Experiencia inmersiva</div>
         </div>
         <div>
           <div class="hero-stat-number">100%</div>
-          <div class="hero-stat-label">Contenido verificado</div>
+          <div class="hero-stat-label" data-i18n="hero_stat3_label">Contenido verificado</div>
         </div>
         <div>
           <div class="hero-stat-number">IA</div>
-          <div class="hero-stat-label">Guía educativa virtual</div>
+          <div class="hero-stat-label" data-i18n="hero_stat4_label">Guía educativa virtual</div>
         </div>
       </div>
     </div>
@@ -507,11 +525,177 @@
   </div>
 </div>
 
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="login-modal-overlay">
+  <div class="modal login-modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title" id="login-modal-title">Mi cuenta</h3>
+      <button class="modal-close" onclick="closeLoginModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="login-tabs">
+        <button class="login-tab active" onclick="switchLoginTab('login', this)">Iniciar sesión</button>
+        <button class="login-tab" onclick="switchLoginTab('register', this)">Registrarse</button>
+      </div>
+      <!-- LOGIN -->
+      <div class="login-panel active" id="panel-login">
+        <div class="social-login">
+          <button class="social-login-btn" onclick="mockSocialLogin('Google')">
+            <span>G</span> Continuar con Google
+          </button>
+        </div>
+        <div class="or-divider">o continúa con email</div>
+        <div class="form-group">
+          <label class="form-label">Correo electrónico</label>
+          <input class="form-input" type="email" id="login-email" placeholder="tu@correo.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Contraseña</label>
+          <input class="form-input" type="password" id="login-pass" placeholder="••••••••">
+        </div>
+        <button class="btn btn--primary" style="width:100%;justify-content:center" onclick="mockEmailLogin()">
+          Iniciar sesión
+        </button>
+        <p style="text-align:center;margin-top:12px;font-size:0.8rem;color:var(--color-muted)">
+          <a href="#" style="color:var(--color-primary)">¿Olvidaste tu contraseña?</a>
+        </p>
+      </div>
+      <!-- REGISTER -->
+      <div class="login-panel" id="panel-register">
+        <div class="social-login">
+          <button class="social-login-btn" onclick="mockSocialLogin('Google')">
+            <span>G</span> Registrarse con Google
+          </button>
+        </div>
+        <div class="or-divider">o regístrate con email</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-input" type="text" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Apellido</label>
+            <input class="form-input" type="text" placeholder="Tu apellido">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Correo electrónico</label>
+          <input class="form-input" type="email" placeholder="tu@correo.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Contraseña</label>
+          <input class="form-input" type="password" placeholder="Mínimo 8 caracteres">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tipo de cuenta</label>
+          <select class="form-select">
+            <option value="visitor">🧳 Turista / Visitante</option>
+            <option value="student">🎓 Estudiante</option>
+            <option value="teacher">📚 Docente</option>
+            <option value="researcher">🔬 Investigador</option>
+            <option value="institution">🏛️ Institución</option>
+          </select>
+        </div>
+        <button class="btn btn--primary" style="width:100%;justify-content:center" onclick="mockRegister()">
+          Crear cuenta gratis
+        </button>
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:0.75rem;color:var(--color-muted)">
+        Al continuar aceptas nuestros <a href="#" style="color:var(--color-primary)">términos de uso</a> y <a href="#" style="color:var(--color-primary)">política de privacidad</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
 <script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script>
+  /* User account system (demo — mock) */
+  const G360_USER = {
+    isLoggedIn: () => !!localStorage.getItem('g360_user'),
+    get: () => JSON.parse(localStorage.getItem('g360_user') || 'null'),
+    set: (u) => localStorage.setItem('g360_user', JSON.stringify(u)),
+    clear: () => localStorage.removeItem('g360_user')
+  };
+
+  function updateUserUI() {
+    const user = G360_USER.get();
+    const loggedOut = document.getElementById('user-logged-out');
+    const loggedIn = document.getElementById('user-logged-in');
+    const displayName = document.getElementById('user-display-name');
+    if (user) {
+      if(loggedOut) loggedOut.style.display = 'none';
+      if(loggedIn) loggedIn.style.display = 'block';
+      if(displayName) displayName.textContent = user.name || user.email;
+    } else {
+      if(loggedOut) loggedOut.style.display = 'block';
+      if(loggedIn) loggedIn.style.display = 'none';
+    }
+  }
+
+  function toggleUserMenu() {
+    document.getElementById('user-dropdown').classList.toggle('open');
+  }
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('user-dropdown');
+    const btn = document.getElementById('user-menu-btn');
+    if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  function openLoginModal(tab = 'login') {
+    const overlay = document.getElementById('login-modal-overlay');
+    if (overlay) overlay.classList.add('open');
+    if (tab === 'register') switchLoginTab('register');
+    document.getElementById('user-dropdown').classList.remove('open');
+  }
+  function closeLoginModal() {
+    const overlay = document.getElementById('login-modal-overlay');
+    if (overlay) overlay.classList.remove('open');
+  }
+  document.getElementById('login-modal-overlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('login-modal-overlay')) closeLoginModal();
+  });
+
+  function switchLoginTab(tab, btn) {
+    document.querySelectorAll('.login-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.login-panel').forEach(p => p.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    const panel = document.getElementById('panel-' + tab);
+    if (panel) panel.classList.add('active');
+  }
+
+  function mockEmailLogin() {
+    const email = document.getElementById('login-email').value;
+    if (!email) { alert('Por favor ingresa tu correo.'); return; }
+    G360_USER.set({ name: email.split('@')[0], email, provider: 'email' });
+    closeLoginModal();
+    updateUserUI();
+  }
+
+  function mockSocialLogin(provider) {
+    G360_USER.set({ name: 'Usuario Demo', email: 'demo@guatemala360.gt', provider });
+    closeLoginModal();
+    updateUserUI();
+  }
+
+  function mockRegister() {
+    G360_USER.set({ name: 'Nuevo Usuario', email: 'nuevo@guatemala360.gt', provider: 'email' });
+    closeLoginModal();
+    updateUserUI();
+  }
+
+  function logout() {
+    G360_USER.clear();
+    updateUserUI();
+    document.getElementById('user-dropdown').classList.remove('open');
+  }
+
   // Render home locations (primeras 3)
   document.addEventListener('DOMContentLoaded', () => {
+    updateUserUI();
     const homeGrid = document.getElementById('home-locations');
     if (homeGrid && typeof G360_DATA !== 'undefined') {
       renderLocationCards(G360_DATA.ubicaciones.slice(0, 3), 'home-locations');
